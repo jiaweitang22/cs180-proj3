@@ -30,6 +30,15 @@ h3 { margin-top: 2rem; }
 .math.display { display: block; max-width: 100%; overflow-x: auto; }
 mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .3rem 0; }
 .figure-img { max-width: 100%; }
+.velocity-original { width: 220px; max-width: 100%; margin: 1.5rem auto; text-align: center; }
+.velocity-original figure { margin: 0; }
+.velocity-original img { width: 100%; height: auto; display: block; }
+.velocity-original figcaption { font-size: .875rem; color: #62676d; margin-top: .5rem; }
+#visualizing-velocity .result-grid img { aspect-ratio: 1; height: auto; }
+.error-scale { max-width: 600px; margin: 1.5rem auto; }
+.error-scale img { width: 100%; height: 12px; display: block; }
+.scale-ticks { display: flex; justify-content: space-between; font-size: .875rem; }
+.error-scale p { text-align: center; font-size: .875rem; color: #62676d; margin-top: .3rem; }
 @media (max-width: 767px) {
   .result-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
   .result-grid.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }

@@ -17,12 +17,19 @@ quarto preview website
 quarto render website
 ```
 
-Pushing website changes to `main` automatically renders the report and deploys
-GitHub Pages through `.github/workflows/pages.yml`. Model execution is disabled
+Pushing website changes to `main` automatically renders the report and publishes
+to the `gh-pages` branch through `.github/workflows/pages.yml`. GitHub Pages
+serves that branch. Model execution is disabled
 during rendering: the page displays saved results rather than rerunning PixNerd.
 The public repository contains the webpage source and selected result assets.
 The local research notebook and support files are not included in this website
 deployment.
+
+To publish a locally rendered update without waiting for the custom workflow:
+
+```sh
+quarto publish gh-pages website --no-prompt --no-browser
+```
 
 To refresh figures after a notebook run, use Python with Pillow and NumPy:
 

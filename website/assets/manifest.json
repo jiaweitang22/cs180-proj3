@@ -378,6 +378,201 @@
       "crop": null
     },
     {
+      "file": "velocity-0-0.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        398,
+        43,
+        745,
+        390
+      ]
+    },
+    {
+      "file": "velocity-0-1.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        787,
+        43,
+        1134,
+        390
+      ]
+    },
+    {
+      "file": "velocity-0-2.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        1175,
+        43,
+        1522,
+        390
+      ]
+    },
+    {
+      "file": "velocity-0-3.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        1563,
+        43,
+        1910,
+        390
+      ]
+    },
+    {
+      "file": "velocity-1-0.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        398,
+        430,
+        745,
+        777
+      ]
+    },
+    {
+      "file": "velocity-1-1.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        787,
+        430,
+        1134,
+        777
+      ]
+    },
+    {
+      "file": "velocity-1-2.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        1175,
+        430,
+        1522,
+        777
+      ]
+    },
+    {
+      "file": "velocity-1-3.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        1563,
+        430,
+        1910,
+        777
+      ]
+    },
+    {
+      "file": "velocity-2-0.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        398,
+        817,
+        745,
+        1164
+      ]
+    },
+    {
+      "file": "velocity-2-1.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        787,
+        817,
+        1134,
+        1164
+      ]
+    },
+    {
+      "file": "velocity-2-2.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        1175,
+        817,
+        1522,
+        1164
+      ]
+    },
+    {
+      "file": "velocity-2-3.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        347,
+        347
+      ],
+      "crop": [
+        1563,
+        817,
+        1910,
+        1164
+      ]
+    },
+    {
+      "file": "velocity-error-scale.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        799,
+        12
+      ],
+      "crop": [
+        1932,
+        206,
+        1944,
+        1005
+      ]
+    },
+    {
       "file": "trajectory-panel.webp",
       "cell": 20,
       "output": 0,

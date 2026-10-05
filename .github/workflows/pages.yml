@@ -5,30 +5,22 @@ on:
     paths: ["website/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 concurrency:
   group: pages
   cancel-in-progress: false
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: 1.7.32
-      - name: Render saved results (no model execution)
-        working-directory: website
-        run: quarto render
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - name: Publish saved results to gh-pages (no model execution)
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          path: website/_site
-      - name: Deploy GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          target: gh-pages
+          path: website
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

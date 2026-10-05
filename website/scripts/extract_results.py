@@ -89,6 +89,17 @@ for k in range(3):
     panel(13,k,f"blur-{k}",2)
     panel(15,k+1,f"one-step-{k}",3)
 save(read_image(18,0),"velocity",18,0)
+velocity_figure = read_image(18,0)
+if velocity_figure.size != (2007,1174):
+    raise ValueError("Update the velocity panel crop geometry for this figure size.")
+for row, y0 in enumerate([43,430,817]):
+    for column, x0 in enumerate([398,787,1175,1563]):
+        crop = [x0,y0,x0+347,y0+347]
+        save(velocity_figure.crop(crop),f"velocity-{row}-{column}",18,0,crop)
+# Reuse the figure's actual magma colorbar, with 0 at left and 0.5 at right.
+scale_crop = [1932,206,1944,1005]
+scale = velocity_figure.crop(scale_crop).transpose(Image.Transpose.ROTATE_270)
+save(scale,"velocity-error-scale",18,0,scale_crop)
 panel(20,0,"trajectory",3,2)
 panel(20,1,"comparison",4)
 panel(22,0,"conditional",4,2,5)

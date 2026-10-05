@@ -1,0 +1,29 @@
+<div class="velocity-original"><figure ><a href="assets/half-dome-original.webp" target="_blank" rel="noopener"><img src="assets/half-dome-original.webp" width="512" height="512" alt="Original Half Dome" loading="lazy" decoding="async"></a><figcaption>Original Half Dome</figcaption></figure></div>
+
+**t = 0.25**
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/velocity-0-0.webp" target="_blank" rel="noopener"><img src="assets/velocity-0-0.webp" width="347" height="347" alt="Noisy input" loading="lazy" decoding="async"></a><figcaption>Noisy input</figcaption></figure>
+<figure ><a href="assets/velocity-0-1.webp" target="_blank" rel="noopener"><img src="assets/velocity-0-1.webp" width="347" height="347" alt="Predicted update" loading="lazy" decoding="async"></a><figcaption>Predicted update</figcaption></figure>
+<figure ><a href="assets/velocity-0-2.webp" target="_blank" rel="noopener"><img src="assets/velocity-0-2.webp" width="347" height="347" alt="Ground-truth update" loading="lazy" decoding="async"></a><figcaption>Ground-truth update</figcaption></figure>
+<figure ><a href="assets/velocity-0-3.webp" target="_blank" rel="noopener"><img src="assets/velocity-0-3.webp" width="347" height="347" alt="Error (RGB RMS)" loading="lazy" decoding="async"></a><figcaption>Error (RGB RMS)</figcaption></figure>
+</div>
+
+**t = 0.50**
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/velocity-1-0.webp" target="_blank" rel="noopener"><img src="assets/velocity-1-0.webp" width="347" height="347" alt="Noisy input" loading="lazy" decoding="async"></a><figcaption>Noisy input</figcaption></figure>
+<figure ><a href="assets/velocity-1-1.webp" target="_blank" rel="noopener"><img src="assets/velocity-1-1.webp" width="347" height="347" alt="Predicted update" loading="lazy" decoding="async"></a><figcaption>Predicted update</figcaption></figure>
+<figure ><a href="assets/velocity-1-2.webp" target="_blank" rel="noopener"><img src="assets/velocity-1-2.webp" width="347" height="347" alt="Ground-truth update" loading="lazy" decoding="async"></a><figcaption>Ground-truth update</figcaption></figure>
+<figure ><a href="assets/velocity-1-3.webp" target="_blank" rel="noopener"><img src="assets/velocity-1-3.webp" width="347" height="347" alt="Error (RGB RMS)" loading="lazy" decoding="async"></a><figcaption>Error (RGB RMS)</figcaption></figure>
+</div>
+
+**t = 0.75**
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/velocity-2-0.webp" target="_blank" rel="noopener"><img src="assets/velocity-2-0.webp" width="347" height="347" alt="Noisy input" loading="lazy" decoding="async"></a><figcaption>Noisy input</figcaption></figure>
+<figure ><a href="assets/velocity-2-1.webp" target="_blank" rel="noopener"><img src="assets/velocity-2-1.webp" width="347" height="347" alt="Predicted update" loading="lazy" decoding="async"></a><figcaption>Predicted update</figcaption></figure>
+<figure ><a href="assets/velocity-2-2.webp" target="_blank" rel="noopener"><img src="assets/velocity-2-2.webp" width="347" height="347" alt="Ground-truth update" loading="lazy" decoding="async"></a><figcaption>Ground-truth update</figcaption></figure>
+<figure ><a href="assets/velocity-2-3.webp" target="_blank" rel="noopener"><img src="assets/velocity-2-3.webp" width="347" height="347" alt="Error (RGB RMS)" loading="lazy" decoding="async"></a><figcaption>Error (RGB RMS)</figcaption></figure>
+</div>
+<div class="error-scale"><img src="assets/velocity-error-scale.webp" alt="Shared magma error scale, from black at zero to pale yellow at 0.5" width="799" height="12"><div class="scale-ticks"><span>0</span><span>0.1</span><span>0.2</span><span>0.3</span><span>0.4</span><span>0.5</span></div><p>Shared RGB RMS error scale</p></div>

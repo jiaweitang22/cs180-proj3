@@ -24,6 +24,12 @@ times=["0.25","0.50","0.75"]
 write("training",grid([(f"training-{i}",l) for i,l in enumerate(["Original Half Dome", *[f"t = {t}" for t in times]])]))
 write("blur",''.join(grid([(f"blur-{i}-0",f"Noisy input · t = {t}"),(f"blur-{i}-1",f"Gaussian blur · σ = {s} · t = {t}")],2) for i,(t,s) in enumerate(zip(times,[8,4,1]))))
 write("one-step",''.join(grid([(f"one-step-{i}-0","Original Half Dome"),(f"one-step-{i}-1",f"Noisy input · t = {t}"),(f"one-step-{i}-2",f"One-step estimate · t = {t}")],3) for i,t in enumerate(times)))
+velocity='<div class="velocity-original">'+image('half-dome-original','Original Half Dome')+'</div>\n'
+for row,t in enumerate(times):
+    velocity+=f'\n**t = {t}**\n\n'
+    velocity+=grid([(f'velocity-{row}-{column}',label) for column,label in enumerate(['Noisy input','Predicted update','Ground-truth update','Error (RGB RMS)'])])
+velocity+='<div class="error-scale"><img src="assets/velocity-error-scale.webp" alt="Shared magma error scale, from black at zero to pale yellow at 0.5" width="799" height="12"><div class="scale-ticks">'+''.join(f'<span>{t}</span>' for t in ['0','0.1','0.2','0.3','0.4','0.5'])+'</div><p>Shared RGB RMS error scale</p></div>\n'
+write('velocity',velocity)
 write("trajectory",grid([(f"trajectory-{i}",f"t = {t}") for i,t in enumerate(["0.50 (initial)","0.60","0.70","0.80","0.90","1.00 (final)"])],3))
 write("comparison",grid([(f"comparison-{i}",l) for i,l in enumerate(["Original","Gaussian blur","One-step denoising","Euler denoising"])]))
 write("conditional",grid([(f"conditional-{i}",f"Seed {180+i} · ordinary conditional") for i in range(5)]))
@@ -64,4 +70,4 @@ for name,title,a,b in [
         hybrids+=f'<figure><img src="assets/hybrid-{name}-{size}.webp" width="{size}" height="{size}" alt="{escape(title)} hybrid at {size} pixels" loading="lazy"><figcaption>{size} × {size} px</figcaption></figure>'
     hybrids+='</div><figcaption>Native thumbnails · distant views</figcaption></figure></div>\n'
 write("hybrids",hybrids)
-print("Built 12 figure layouts.")
+print("Built 13 figure layouts.")
