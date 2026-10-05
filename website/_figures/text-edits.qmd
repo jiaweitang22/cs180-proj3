@@ -1,0 +1,45 @@
+
+**Campanile → lighthouse**
+
+<p class="prompt"><strong>Prompt:</strong> “a photograph of a lighthouse beside the ocean”</p>
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/text-edit-campanile-0.webp" target="_blank" rel="noopener"><img src="assets/text-edit-campanile-0.webp" width="361" height="360" alt="Original" loading="lazy" decoding="async"></a><figcaption>Original</figcaption></figure>
+<figure ><a href="assets/text-edit-campanile-1.webp" target="_blank" rel="noopener"><img src="assets/text-edit-campanile-1.webp" width="361" height="360" alt="Starting t = 0.02" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.02</figcaption></figure>
+<figure ><a href="assets/text-edit-campanile-2.webp" target="_blank" rel="noopener"><img src="assets/text-edit-campanile-2.webp" width="361" height="360" alt="Starting t = 0.04" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.04</figcaption></figure>
+<figure ><a href="assets/text-edit-campanile-3.webp" target="_blank" rel="noopener"><img src="assets/text-edit-campanile-3.webp" width="361" height="360" alt="Starting t = 0.06" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.06</figcaption></figure>
+<figure ><a href="assets/text-edit-campanile-4.webp" target="_blank" rel="noopener"><img src="assets/text-edit-campanile-4.webp" width="361" height="360" alt="Starting t = 0.10" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.10</figcaption></figure>
+<figure ><a href="assets/text-edit-campanile-5.webp" target="_blank" rel="noopener"><img src="assets/text-edit-campanile-5.webp" width="361" height="360" alt="Starting t = 0.14" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.14</figcaption></figure>
+<figure ><a href="assets/text-edit-campanile-6.webp" target="_blank" rel="noopener"><img src="assets/text-edit-campanile-6.webp" width="361" height="360" alt="Starting t = 0.25" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.25</figcaption></figure>
+<figure ><a href="assets/text-edit-campanile-7.webp" target="_blank" rel="noopener"><img src="assets/text-edit-campanile-7.webp" width="361" height="360" alt="Starting t = 0.50" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.50</figcaption></figure>
+</div>
+
+**Half Dome → volcano**
+
+<p class="prompt"><strong>Prompt:</strong> “a photograph of an erupting volcano surrounded by forest”</p>
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/text-edit-half-dome-0.webp" target="_blank" rel="noopener"><img src="assets/text-edit-half-dome-0.webp" width="361" height="360" alt="Original" loading="lazy" decoding="async"></a><figcaption>Original</figcaption></figure>
+<figure ><a href="assets/text-edit-half-dome-1.webp" target="_blank" rel="noopener"><img src="assets/text-edit-half-dome-1.webp" width="361" height="360" alt="Starting t = 0.02" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.02</figcaption></figure>
+<figure ><a href="assets/text-edit-half-dome-2.webp" target="_blank" rel="noopener"><img src="assets/text-edit-half-dome-2.webp" width="361" height="360" alt="Starting t = 0.04" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.04</figcaption></figure>
+<figure ><a href="assets/text-edit-half-dome-3.webp" target="_blank" rel="noopener"><img src="assets/text-edit-half-dome-3.webp" width="361" height="360" alt="Starting t = 0.06" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.06</figcaption></figure>
+<figure ><a href="assets/text-edit-half-dome-4.webp" target="_blank" rel="noopener"><img src="assets/text-edit-half-dome-4.webp" width="361" height="360" alt="Starting t = 0.10" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.10</figcaption></figure>
+<figure ><a href="assets/text-edit-half-dome-5.webp" target="_blank" rel="noopener"><img src="assets/text-edit-half-dome-5.webp" width="361" height="360" alt="Starting t = 0.14" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.14</figcaption></figure>
+<figure ><a href="assets/text-edit-half-dome-6.webp" target="_blank" rel="noopener"><img src="assets/text-edit-half-dome-6.webp" width="361" height="360" alt="Starting t = 0.25" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.25</figcaption></figure>
+<figure ><a href="assets/text-edit-half-dome-7.webp" target="_blank" rel="noopener"><img src="assets/text-edit-half-dome-7.webp" width="361" height="360" alt="Starting t = 0.50" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.50</figcaption></figure>
+</div>
+
+**Pixel chicken → rooster**
+
+<p class="prompt"><strong>Prompt:</strong> “a photograph of a rooster against a turquoise background”</p>
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/text-edit-chicken-0.webp" target="_blank" rel="noopener"><img src="assets/text-edit-chicken-0.webp" width="361" height="360" alt="Original" loading="lazy" decoding="async"></a><figcaption>Original</figcaption></figure>
+<figure ><a href="assets/text-edit-chicken-1.webp" target="_blank" rel="noopener"><img src="assets/text-edit-chicken-1.webp" width="361" height="360" alt="Starting t = 0.02" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.02</figcaption></figure>
+<figure ><a href="assets/text-edit-chicken-2.webp" target="_blank" rel="noopener"><img src="assets/text-edit-chicken-2.webp" width="361" height="360" alt="Starting t = 0.04" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.04</figcaption></figure>
+<figure ><a href="assets/text-edit-chicken-3.webp" target="_blank" rel="noopener"><img src="assets/text-edit-chicken-3.webp" width="361" height="360" alt="Starting t = 0.06" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.06</figcaption></figure>
+<figure ><a href="assets/text-edit-chicken-4.webp" target="_blank" rel="noopener"><img src="assets/text-edit-chicken-4.webp" width="361" height="360" alt="Starting t = 0.10" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.10</figcaption></figure>
+<figure ><a href="assets/text-edit-chicken-5.webp" target="_blank" rel="noopener"><img src="assets/text-edit-chicken-5.webp" width="361" height="360" alt="Starting t = 0.14" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.14</figcaption></figure>
+<figure ><a href="assets/text-edit-chicken-6.webp" target="_blank" rel="noopener"><img src="assets/text-edit-chicken-6.webp" width="361" height="360" alt="Starting t = 0.25" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.25</figcaption></figure>
+<figure ><a href="assets/text-edit-chicken-7.webp" target="_blank" rel="noopener"><img src="assets/text-edit-chicken-7.webp" width="361" height="360" alt="Starting t = 0.50" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.50</figcaption></figure>
+</div>

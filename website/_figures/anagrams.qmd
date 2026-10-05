@@ -1,0 +1,16 @@
+
+**Waterfall / sailor**
+
+<div class="result-grid cols-2">
+<figure class="anagram-view" id="waterfall-sailor"><a href="assets/anagram-waterfall-sailor-0.webp" target="_blank" rel="noopener"><img src="assets/anagram-waterfall-sailor-0.webp" width="374" height="373" alt="Upright: an oil painting of a canyon waterfall" loading="lazy" decoding="async"></a><figcaption>Upright: an oil painting of a canyon waterfall</figcaption></figure>
+<figure ><a href="assets/anagram-waterfall-sailor-1.webp" target="_blank" rel="noopener"><img src="assets/anagram-waterfall-sailor-1.webp" width="374" height="373" alt="Rotated 180°: an oil painting of a bearded sailor" loading="lazy" decoding="async"></a><figcaption>Rotated 180°: an oil painting of a bearded sailor</figcaption></figure>
+</div>
+<button class="rotate-result" aria-controls="waterfall-sailor" aria-pressed="false">Rotate 180°</button>
+
+**Cabin / wolf**
+
+<div class="result-grid cols-2">
+<figure class="anagram-view" id="cabin-wolf"><a href="assets/anagram-cabin-wolf-0.webp" target="_blank" rel="noopener"><img src="assets/anagram-cabin-wolf-0.webp" width="374" height="373" alt="Upright: an oil painting of a snow-covered cabin in pine trees" loading="lazy" decoding="async"></a><figcaption>Upright: an oil painting of a snow-covered cabin in pine trees</figcaption></figure>
+<figure ><a href="assets/anagram-cabin-wolf-1.webp" target="_blank" rel="noopener"><img src="assets/anagram-cabin-wolf-1.webp" width="374" height="373" alt="Rotated 180°: an oil painting of a wolf&#x27;s face" loading="lazy" decoding="async"></a><figcaption>Rotated 180°: an oil painting of a wolf&#x27;s face</figcaption></figure>
+</div>
+<button class="rotate-result" aria-controls="cabin-wolf" aria-pressed="false">Rotate 180°</button>

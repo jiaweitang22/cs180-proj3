@@ -1,0 +1,2031 @@
+{
+  "notebook": "notebooks/parta.ipynb",
+  "sha256": "6b3e501c15e3cd0b5f781d8ae6ac65d39d8a6cb66721957086c4c0321566317d",
+  "assets": [
+    {
+      "file": "half-dome-original.webp",
+      "cell": 9,
+      "output": 0,
+      "size": [
+        512,
+        512
+      ],
+      "crop": null
+    },
+    {
+      "file": "training-panel.webp",
+      "cell": 11,
+      "output": 0,
+      "size": [
+        1593,
+        411
+      ],
+      "crop": null
+    },
+    {
+      "file": "training-0.webp",
+      "cell": 11,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "training-1.webp",
+      "cell": 11,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "training-2.webp",
+      "cell": 11,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "training-3.webp",
+      "cell": 11,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        28,
+        1584,
+        401
+      ]
+    },
+    {
+      "file": "blur-0-panel.webp",
+      "cell": 13,
+      "output": 0,
+      "size": [
+        793,
+        411
+      ],
+      "crop": null
+    },
+    {
+      "file": "blur-0-0.webp",
+      "cell": 13,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "blur-0-1.webp",
+      "cell": 13,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "one-step-0-panel.webp",
+      "cell": 15,
+      "output": 1,
+      "size": [
+        1193,
+        411
+      ],
+      "crop": null
+    },
+    {
+      "file": "one-step-0-0.webp",
+      "cell": 15,
+      "output": 1,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "one-step-0-1.webp",
+      "cell": 15,
+      "output": 1,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "one-step-0-2.webp",
+      "cell": 15,
+      "output": 1,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "blur-1-panel.webp",
+      "cell": 13,
+      "output": 1,
+      "size": [
+        793,
+        411
+      ],
+      "crop": null
+    },
+    {
+      "file": "blur-1-0.webp",
+      "cell": 13,
+      "output": 1,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "blur-1-1.webp",
+      "cell": 13,
+      "output": 1,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "one-step-1-panel.webp",
+      "cell": 15,
+      "output": 2,
+      "size": [
+        1193,
+        411
+      ],
+      "crop": null
+    },
+    {
+      "file": "one-step-1-0.webp",
+      "cell": 15,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "one-step-1-1.webp",
+      "cell": 15,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "one-step-1-2.webp",
+      "cell": 15,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "blur-2-panel.webp",
+      "cell": 13,
+      "output": 2,
+      "size": [
+        793,
+        411
+      ],
+      "crop": null
+    },
+    {
+      "file": "blur-2-0.webp",
+      "cell": 13,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "blur-2-1.webp",
+      "cell": 13,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "one-step-2-panel.webp",
+      "cell": 15,
+      "output": 3,
+      "size": [
+        1193,
+        411
+      ],
+      "crop": null
+    },
+    {
+      "file": "one-step-2-0.webp",
+      "cell": 15,
+      "output": 3,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "one-step-2-1.webp",
+      "cell": 15,
+      "output": 3,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "one-step-2-2.webp",
+      "cell": 15,
+      "output": 3,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "velocity.webp",
+      "cell": 18,
+      "output": 0,
+      "size": [
+        2007,
+        1174
+      ],
+      "crop": null
+    },
+    {
+      "file": "trajectory-panel.webp",
+      "cell": 20,
+      "output": 0,
+      "size": [
+        1193,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "trajectory-0.webp",
+      "cell": 20,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "trajectory-1.webp",
+      "cell": 20,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "trajectory-2.webp",
+      "cell": 20,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "trajectory-3.webp",
+      "cell": 20,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        428,
+        384,
+        801
+      ]
+    },
+    {
+      "file": "trajectory-4.webp",
+      "cell": 20,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        428,
+        784,
+        801
+      ]
+    },
+    {
+      "file": "trajectory-5.webp",
+      "cell": 20,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        428,
+        1184,
+        801
+      ]
+    },
+    {
+      "file": "comparison-panel.webp",
+      "cell": 20,
+      "output": 1,
+      "size": [
+        1593,
+        411
+      ],
+      "crop": null
+    },
+    {
+      "file": "comparison-0.webp",
+      "cell": 20,
+      "output": 1,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "comparison-1.webp",
+      "cell": 20,
+      "output": 1,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "comparison-2.webp",
+      "cell": 20,
+      "output": 1,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "comparison-3.webp",
+      "cell": 20,
+      "output": 1,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        28,
+        1584,
+        401
+      ]
+    },
+    {
+      "file": "conditional-panel.webp",
+      "cell": 22,
+      "output": 0,
+      "size": [
+        1602,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "conditional-0.webp",
+      "cell": 22,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "conditional-1.webp",
+      "cell": 22,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "conditional-2.webp",
+      "cell": 22,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "conditional-3.webp",
+      "cell": 22,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        28,
+        1584,
+        401
+      ]
+    },
+    {
+      "file": "conditional-4.webp",
+      "cell": 22,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        428,
+        384,
+        801
+      ]
+    },
+    {
+      "file": "cfg-panel.webp",
+      "cell": 26,
+      "output": 0,
+      "size": [
+        1602,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "cfg-0.webp",
+      "cell": 26,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "cfg-1.webp",
+      "cell": 26,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "cfg-2.webp",
+      "cell": 26,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "cfg-3.webp",
+      "cell": 26,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        28,
+        1584,
+        401
+      ]
+    },
+    {
+      "file": "cfg-4.webp",
+      "cell": 26,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        428,
+        384,
+        801
+      ]
+    },
+    {
+      "file": "edit-campanile-panel.webp",
+      "cell": 30,
+      "output": 0,
+      "size": [
+        1593,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "edit-campanile-0.webp",
+      "cell": 30,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "edit-campanile-1.webp",
+      "cell": 30,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "edit-campanile-2.webp",
+      "cell": 30,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "edit-campanile-3.webp",
+      "cell": 30,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        28,
+        1584,
+        401
+      ]
+    },
+    {
+      "file": "edit-campanile-4.webp",
+      "cell": 30,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        428,
+        384,
+        801
+      ]
+    },
+    {
+      "file": "edit-campanile-5.webp",
+      "cell": 30,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        428,
+        784,
+        801
+      ]
+    },
+    {
+      "file": "edit-campanile-6.webp",
+      "cell": 30,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        428,
+        1184,
+        801
+      ]
+    },
+    {
+      "file": "edit-campanile-7.webp",
+      "cell": 30,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        428,
+        1584,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-campanile-panel.webp",
+      "cell": 34,
+      "output": 0,
+      "size": [
+        1580,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "text-edit-campanile-0.webp",
+      "cell": 34,
+      "output": 0,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        10,
+        41,
+        371,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-campanile-1.webp",
+      "cell": 34,
+      "output": 0,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        410,
+        41,
+        771,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-campanile-2.webp",
+      "cell": 34,
+      "output": 0,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        810,
+        41,
+        1171,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-campanile-3.webp",
+      "cell": 34,
+      "output": 0,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        1210,
+        41,
+        1571,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-campanile-4.webp",
+      "cell": 34,
+      "output": 0,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        10,
+        441,
+        371,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-campanile-5.webp",
+      "cell": 34,
+      "output": 0,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        410,
+        441,
+        771,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-campanile-6.webp",
+      "cell": 34,
+      "output": 0,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        810,
+        441,
+        1171,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-campanile-7.webp",
+      "cell": 34,
+      "output": 0,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        1210,
+        441,
+        1571,
+        801
+      ]
+    },
+    {
+      "file": "edit-half-dome-panel.webp",
+      "cell": 30,
+      "output": 2,
+      "size": [
+        1593,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "edit-half-dome-0.webp",
+      "cell": 30,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "edit-half-dome-1.webp",
+      "cell": 30,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "edit-half-dome-2.webp",
+      "cell": 30,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "edit-half-dome-3.webp",
+      "cell": 30,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        28,
+        1584,
+        401
+      ]
+    },
+    {
+      "file": "edit-half-dome-4.webp",
+      "cell": 30,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        428,
+        384,
+        801
+      ]
+    },
+    {
+      "file": "edit-half-dome-5.webp",
+      "cell": 30,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        428,
+        784,
+        801
+      ]
+    },
+    {
+      "file": "edit-half-dome-6.webp",
+      "cell": 30,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        428,
+        1184,
+        801
+      ]
+    },
+    {
+      "file": "edit-half-dome-7.webp",
+      "cell": 30,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        428,
+        1584,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-half-dome-panel.webp",
+      "cell": 34,
+      "output": 2,
+      "size": [
+        1580,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "text-edit-half-dome-0.webp",
+      "cell": 34,
+      "output": 2,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        10,
+        41,
+        371,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-half-dome-1.webp",
+      "cell": 34,
+      "output": 2,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        410,
+        41,
+        771,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-half-dome-2.webp",
+      "cell": 34,
+      "output": 2,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        810,
+        41,
+        1171,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-half-dome-3.webp",
+      "cell": 34,
+      "output": 2,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        1210,
+        41,
+        1571,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-half-dome-4.webp",
+      "cell": 34,
+      "output": 2,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        10,
+        441,
+        371,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-half-dome-5.webp",
+      "cell": 34,
+      "output": 2,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        410,
+        441,
+        771,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-half-dome-6.webp",
+      "cell": 34,
+      "output": 2,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        810,
+        441,
+        1171,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-half-dome-7.webp",
+      "cell": 34,
+      "output": 2,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        1210,
+        441,
+        1571,
+        801
+      ]
+    },
+    {
+      "file": "edit-chicken-panel.webp",
+      "cell": 30,
+      "output": 4,
+      "size": [
+        1593,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "edit-chicken-0.webp",
+      "cell": 30,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "edit-chicken-1.webp",
+      "cell": 30,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "edit-chicken-2.webp",
+      "cell": 30,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "edit-chicken-3.webp",
+      "cell": 30,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        28,
+        1584,
+        401
+      ]
+    },
+    {
+      "file": "edit-chicken-4.webp",
+      "cell": 30,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        428,
+        384,
+        801
+      ]
+    },
+    {
+      "file": "edit-chicken-5.webp",
+      "cell": 30,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        428,
+        784,
+        801
+      ]
+    },
+    {
+      "file": "edit-chicken-6.webp",
+      "cell": 30,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        428,
+        1184,
+        801
+      ]
+    },
+    {
+      "file": "edit-chicken-7.webp",
+      "cell": 30,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        428,
+        1584,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-chicken-panel.webp",
+      "cell": 34,
+      "output": 4,
+      "size": [
+        1580,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "text-edit-chicken-0.webp",
+      "cell": 34,
+      "output": 4,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        10,
+        41,
+        371,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-chicken-1.webp",
+      "cell": 34,
+      "output": 4,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        410,
+        41,
+        771,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-chicken-2.webp",
+      "cell": 34,
+      "output": 4,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        810,
+        41,
+        1171,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-chicken-3.webp",
+      "cell": 34,
+      "output": 4,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        1210,
+        41,
+        1571,
+        401
+      ]
+    },
+    {
+      "file": "text-edit-chicken-4.webp",
+      "cell": 34,
+      "output": 4,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        10,
+        441,
+        371,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-chicken-5.webp",
+      "cell": 34,
+      "output": 4,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        410,
+        441,
+        771,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-chicken-6.webp",
+      "cell": 34,
+      "output": 4,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        810,
+        441,
+        1171,
+        801
+      ]
+    },
+    {
+      "file": "text-edit-chicken-7.webp",
+      "cell": 34,
+      "output": 4,
+      "size": [
+        361,
+        360
+      ],
+      "crop": [
+        1210,
+        441,
+        1571,
+        801
+      ]
+    },
+    {
+      "file": "edit-web-landscape-panel.webp",
+      "cell": 32,
+      "output": 0,
+      "size": [
+        1593,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "edit-web-landscape-0.webp",
+      "cell": 32,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "edit-web-landscape-1.webp",
+      "cell": 32,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "edit-web-landscape-2.webp",
+      "cell": 32,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "edit-web-landscape-3.webp",
+      "cell": 32,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        28,
+        1584,
+        401
+      ]
+    },
+    {
+      "file": "edit-web-landscape-4.webp",
+      "cell": 32,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        428,
+        384,
+        801
+      ]
+    },
+    {
+      "file": "edit-web-landscape-5.webp",
+      "cell": 32,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        428,
+        784,
+        801
+      ]
+    },
+    {
+      "file": "edit-web-landscape-6.webp",
+      "cell": 32,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        428,
+        1184,
+        801
+      ]
+    },
+    {
+      "file": "edit-web-landscape-7.webp",
+      "cell": 32,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        428,
+        1584,
+        801
+      ]
+    },
+    {
+      "file": "edit-drawing-mountain-panel.webp",
+      "cell": 32,
+      "output": 2,
+      "size": [
+        1593,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "edit-drawing-mountain-0.webp",
+      "cell": 32,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "edit-drawing-mountain-1.webp",
+      "cell": 32,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "edit-drawing-mountain-2.webp",
+      "cell": 32,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        28,
+        1184,
+        401
+      ]
+    },
+    {
+      "file": "edit-drawing-mountain-3.webp",
+      "cell": 32,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        28,
+        1584,
+        401
+      ]
+    },
+    {
+      "file": "edit-drawing-mountain-4.webp",
+      "cell": 32,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        428,
+        384,
+        801
+      ]
+    },
+    {
+      "file": "edit-drawing-mountain-5.webp",
+      "cell": 32,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        428,
+        784,
+        801
+      ]
+    },
+    {
+      "file": "edit-drawing-mountain-6.webp",
+      "cell": 32,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        810,
+        428,
+        1184,
+        801
+      ]
+    },
+    {
+      "file": "edit-drawing-mountain-7.webp",
+      "cell": 32,
+      "output": 2,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1210,
+        428,
+        1584,
+        801
+      ]
+    },
+    {
+      "file": "edit-drawing-flower-panel.webp",
+      "cell": 32,
+      "output": 4,
+      "size": [
+        1593,
+        811
+      ],
+      "crop": null
+    },
+    {
+      "file": "edit-drawing-flower-0.webp",
+      "cell": 32,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "edit-drawing-flower-1.webp",
+      "cell": 32,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        408,
+        28,
+        782,
+        401
+      ]
+    },
+    {
+      "file": "edit-drawing-flower-2.webp",
+      "cell": 32,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        806,
+        28,
+        1180,
+        401
+      ]
+    },
+    {
+      "file": "edit-drawing-flower-3.webp",
+      "cell": 32,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1205,
+        28,
+        1579,
+        401
+      ]
+    },
+    {
+      "file": "edit-drawing-flower-4.webp",
+      "cell": 32,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        428,
+        384,
+        801
+      ]
+    },
+    {
+      "file": "edit-drawing-flower-5.webp",
+      "cell": 32,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        408,
+        428,
+        782,
+        801
+      ]
+    },
+    {
+      "file": "edit-drawing-flower-6.webp",
+      "cell": 32,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        806,
+        428,
+        1180,
+        801
+      ]
+    },
+    {
+      "file": "edit-drawing-flower-7.webp",
+      "cell": 32,
+      "output": 4,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        1205,
+        428,
+        1579,
+        801
+      ]
+    },
+    {
+      "file": "anagram-waterfall-sailor-panel.webp",
+      "cell": 37,
+      "output": 0,
+      "size": [
+        793,
+        411
+      ],
+      "crop": null
+    },
+    {
+      "file": "anagram-waterfall-sailor-0.webp",
+      "cell": 37,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "anagram-waterfall-sailor-1.webp",
+      "cell": 37,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "anagram-cabin-wolf-panel.webp",
+      "cell": 38,
+      "output": 0,
+      "size": [
+        793,
+        411
+      ],
+      "crop": null
+    },
+    {
+      "file": "anagram-cabin-wolf-0.webp",
+      "cell": 38,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        10,
+        28,
+        384,
+        401
+      ]
+    },
+    {
+      "file": "anagram-cabin-wolf-1.webp",
+      "cell": 38,
+      "output": 0,
+      "size": [
+        374,
+        373
+      ],
+      "crop": [
+        410,
+        28,
+        784,
+        401
+      ]
+    },
+    {
+      "file": "hybrid-fox-forest.webp",
+      "cell": 41,
+      "output": 1,
+      "size": [
+        512,
+        512
+      ],
+      "crop": null
+    },
+    {
+      "file": "hybrid-fox-forest-64.webp",
+      "cell": 41,
+      "output": 3,
+      "size": [
+        64,
+        64
+      ],
+      "crop": null
+    },
+    {
+      "file": "hybrid-fox-forest-32.webp",
+      "cell": 41,
+      "output": 1,
+      "size": [
+        32,
+        32
+      ],
+      "crop": null
+    },
+    {
+      "file": "hybrid-elephant-ruins.webp",
+      "cell": 42,
+      "output": 1,
+      "size": [
+        512,
+        512
+      ],
+      "crop": null
+    },
+    {
+      "file": "hybrid-elephant-ruins-64.webp",
+      "cell": 42,
+      "output": 3,
+      "size": [
+        64,
+        64
+      ],
+      "crop": null
+    },
+    {
+      "file": "hybrid-elephant-ruins-32.webp",
+      "cell": 42,
+      "output": 1,
+      "size": [
+        32,
+        32
+      ],
+      "crop": null
+    }
+  ]
+}

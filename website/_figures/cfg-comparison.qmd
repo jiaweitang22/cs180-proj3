@@ -1,0 +1,20 @@
+<div class="result-grid cols-2">
+<figure ><a href="assets/conditional-0.webp" target="_blank" rel="noopener"><img src="assets/conditional-0.webp" width="374" height="373" alt="Seed 180 · ordinary conditional" loading="lazy" decoding="async"></a><figcaption>Seed 180 · ordinary conditional</figcaption></figure>
+<figure ><a href="assets/cfg-0.webp" target="_blank" rel="noopener"><img src="assets/cfg-0.webp" width="374" height="373" alt="Seed 180 · CFG w = 7" loading="lazy" decoding="async"></a><figcaption>Seed 180 · CFG w = 7</figcaption></figure>
+</div>
+<div class="result-grid cols-2">
+<figure ><a href="assets/conditional-1.webp" target="_blank" rel="noopener"><img src="assets/conditional-1.webp" width="374" height="373" alt="Seed 181 · ordinary conditional" loading="lazy" decoding="async"></a><figcaption>Seed 181 · ordinary conditional</figcaption></figure>
+<figure ><a href="assets/cfg-1.webp" target="_blank" rel="noopener"><img src="assets/cfg-1.webp" width="374" height="373" alt="Seed 181 · CFG w = 7" loading="lazy" decoding="async"></a><figcaption>Seed 181 · CFG w = 7</figcaption></figure>
+</div>
+<div class="result-grid cols-2">
+<figure ><a href="assets/conditional-2.webp" target="_blank" rel="noopener"><img src="assets/conditional-2.webp" width="374" height="373" alt="Seed 182 · ordinary conditional" loading="lazy" decoding="async"></a><figcaption>Seed 182 · ordinary conditional</figcaption></figure>
+<figure ><a href="assets/cfg-2.webp" target="_blank" rel="noopener"><img src="assets/cfg-2.webp" width="374" height="373" alt="Seed 182 · CFG w = 7" loading="lazy" decoding="async"></a><figcaption>Seed 182 · CFG w = 7</figcaption></figure>
+</div>
+<div class="result-grid cols-2">
+<figure ><a href="assets/conditional-3.webp" target="_blank" rel="noopener"><img src="assets/conditional-3.webp" width="374" height="373" alt="Seed 183 · ordinary conditional" loading="lazy" decoding="async"></a><figcaption>Seed 183 · ordinary conditional</figcaption></figure>
+<figure ><a href="assets/cfg-3.webp" target="_blank" rel="noopener"><img src="assets/cfg-3.webp" width="374" height="373" alt="Seed 183 · CFG w = 7" loading="lazy" decoding="async"></a><figcaption>Seed 183 · CFG w = 7</figcaption></figure>
+</div>
+<div class="result-grid cols-2">
+<figure ><a href="assets/conditional-4.webp" target="_blank" rel="noopener"><img src="assets/conditional-4.webp" width="374" height="373" alt="Seed 184 · ordinary conditional" loading="lazy" decoding="async"></a><figcaption>Seed 184 · ordinary conditional</figcaption></figure>
+<figure ><a href="assets/cfg-4.webp" target="_blank" rel="noopener"><img src="assets/cfg-4.webp" width="374" height="373" alt="Seed 184 · CFG w = 7" loading="lazy" decoding="async"></a><figcaption>Seed 184 · CFG w = 7</figcaption></figure>
+</div>

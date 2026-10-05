@@ -1,0 +1,39 @@
+
+**Campanile**
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/edit-campanile-0.webp" target="_blank" rel="noopener"><img src="assets/edit-campanile-0.webp" width="374" height="373" alt="Original" loading="lazy" decoding="async"></a><figcaption>Original</figcaption></figure>
+<figure ><a href="assets/edit-campanile-1.webp" target="_blank" rel="noopener"><img src="assets/edit-campanile-1.webp" width="374" height="373" alt="Starting t = 0.02" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.02</figcaption></figure>
+<figure ><a href="assets/edit-campanile-2.webp" target="_blank" rel="noopener"><img src="assets/edit-campanile-2.webp" width="374" height="373" alt="Starting t = 0.04" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.04</figcaption></figure>
+<figure ><a href="assets/edit-campanile-3.webp" target="_blank" rel="noopener"><img src="assets/edit-campanile-3.webp" width="374" height="373" alt="Starting t = 0.06" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.06</figcaption></figure>
+<figure ><a href="assets/edit-campanile-4.webp" target="_blank" rel="noopener"><img src="assets/edit-campanile-4.webp" width="374" height="373" alt="Starting t = 0.10" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.10</figcaption></figure>
+<figure ><a href="assets/edit-campanile-5.webp" target="_blank" rel="noopener"><img src="assets/edit-campanile-5.webp" width="374" height="373" alt="Starting t = 0.14" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.14</figcaption></figure>
+<figure ><a href="assets/edit-campanile-6.webp" target="_blank" rel="noopener"><img src="assets/edit-campanile-6.webp" width="374" height="373" alt="Starting t = 0.25" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.25</figcaption></figure>
+<figure ><a href="assets/edit-campanile-7.webp" target="_blank" rel="noopener"><img src="assets/edit-campanile-7.webp" width="374" height="373" alt="Starting t = 0.50" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.50</figcaption></figure>
+</div>
+
+**Half Dome**
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/edit-half-dome-0.webp" target="_blank" rel="noopener"><img src="assets/edit-half-dome-0.webp" width="374" height="373" alt="Original" loading="lazy" decoding="async"></a><figcaption>Original</figcaption></figure>
+<figure ><a href="assets/edit-half-dome-1.webp" target="_blank" rel="noopener"><img src="assets/edit-half-dome-1.webp" width="374" height="373" alt="Starting t = 0.02" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.02</figcaption></figure>
+<figure ><a href="assets/edit-half-dome-2.webp" target="_blank" rel="noopener"><img src="assets/edit-half-dome-2.webp" width="374" height="373" alt="Starting t = 0.04" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.04</figcaption></figure>
+<figure ><a href="assets/edit-half-dome-3.webp" target="_blank" rel="noopener"><img src="assets/edit-half-dome-3.webp" width="374" height="373" alt="Starting t = 0.06" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.06</figcaption></figure>
+<figure ><a href="assets/edit-half-dome-4.webp" target="_blank" rel="noopener"><img src="assets/edit-half-dome-4.webp" width="374" height="373" alt="Starting t = 0.10" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.10</figcaption></figure>
+<figure ><a href="assets/edit-half-dome-5.webp" target="_blank" rel="noopener"><img src="assets/edit-half-dome-5.webp" width="374" height="373" alt="Starting t = 0.14" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.14</figcaption></figure>
+<figure ><a href="assets/edit-half-dome-6.webp" target="_blank" rel="noopener"><img src="assets/edit-half-dome-6.webp" width="374" height="373" alt="Starting t = 0.25" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.25</figcaption></figure>
+<figure ><a href="assets/edit-half-dome-7.webp" target="_blank" rel="noopener"><img src="assets/edit-half-dome-7.webp" width="374" height="373" alt="Starting t = 0.50" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.50</figcaption></figure>
+</div>
+
+**Pixel-art chicken**
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/edit-chicken-0.webp" target="_blank" rel="noopener"><img src="assets/edit-chicken-0.webp" width="374" height="373" alt="Original" loading="lazy" decoding="async"></a><figcaption>Original</figcaption></figure>
+<figure ><a href="assets/edit-chicken-1.webp" target="_blank" rel="noopener"><img src="assets/edit-chicken-1.webp" width="374" height="373" alt="Starting t = 0.02" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.02</figcaption></figure>
+<figure ><a href="assets/edit-chicken-2.webp" target="_blank" rel="noopener"><img src="assets/edit-chicken-2.webp" width="374" height="373" alt="Starting t = 0.04" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.04</figcaption></figure>
+<figure ><a href="assets/edit-chicken-3.webp" target="_blank" rel="noopener"><img src="assets/edit-chicken-3.webp" width="374" height="373" alt="Starting t = 0.06" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.06</figcaption></figure>
+<figure ><a href="assets/edit-chicken-4.webp" target="_blank" rel="noopener"><img src="assets/edit-chicken-4.webp" width="374" height="373" alt="Starting t = 0.10" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.10</figcaption></figure>
+<figure ><a href="assets/edit-chicken-5.webp" target="_blank" rel="noopener"><img src="assets/edit-chicken-5.webp" width="374" height="373" alt="Starting t = 0.14" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.14</figcaption></figure>
+<figure ><a href="assets/edit-chicken-6.webp" target="_blank" rel="noopener"><img src="assets/edit-chicken-6.webp" width="374" height="373" alt="Starting t = 0.25" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.25</figcaption></figure>
+<figure ><a href="assets/edit-chicken-7.webp" target="_blank" rel="noopener"><img src="assets/edit-chicken-7.webp" width="374" height="373" alt="Starting t = 0.50" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.50</figcaption></figure>
+</div>

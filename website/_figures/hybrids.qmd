@@ -1,0 +1,12 @@
+
+**Fox / autumn forest**
+
+<p class="prompt"><strong>Distant:</strong> “an oil painting of a fox”<br><strong>Close:</strong> “an oil painting of an autumn forest”</p>
+
+<div class="hybrid-grid"><figure><a href="assets/hybrid-fox-forest.webp" target="_blank" rel="noopener"><img class="hybrid-full" src="assets/hybrid-fox-forest.webp" width="512" height="512" alt="Fox / autumn forest hybrid, full view" loading="lazy"></a><figcaption>Full hybrid · close view</figcaption></figure><figure><div class="distant-frame"><figure><img src="assets/hybrid-fox-forest-64.webp" width="64" height="64" alt="Fox / autumn forest hybrid at 64 pixels" loading="lazy"><figcaption>64 × 64 px</figcaption></figure><figure><img src="assets/hybrid-fox-forest-32.webp" width="32" height="32" alt="Fox / autumn forest hybrid at 32 pixels" loading="lazy"><figcaption>32 × 32 px</figcaption></figure></div><figcaption>Native thumbnails · distant views</figcaption></figure></div>
+
+**Elephant / stone ruins**
+
+<p class="prompt"><strong>Distant:</strong> “an oil painting of an elephant&#x27;s face”<br><strong>Close:</strong> “an oil painting of ancient stone ruins”</p>
+
+<div class="hybrid-grid"><figure><a href="assets/hybrid-elephant-ruins.webp" target="_blank" rel="noopener"><img class="hybrid-full" src="assets/hybrid-elephant-ruins.webp" width="512" height="512" alt="Elephant / stone ruins hybrid, full view" loading="lazy"></a><figcaption>Full hybrid · close view</figcaption></figure><figure><div class="distant-frame"><figure><img src="assets/hybrid-elephant-ruins-64.webp" width="64" height="64" alt="Elephant / stone ruins hybrid at 64 pixels" loading="lazy"><figcaption>64 × 64 px</figcaption></figure><figure><img src="assets/hybrid-elephant-ruins-32.webp" width="32" height="32" alt="Elephant / stone ruins hybrid at 32 pixels" loading="lazy"><figcaption>32 × 32 px</figcaption></figure></div><figcaption>Native thumbnails · distant views</figcaption></figure></div>

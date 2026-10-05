@@ -1,0 +1,6 @@
+<div class="result-grid cols-4">
+<figure ><a href="assets/training-0.webp" target="_blank" rel="noopener"><img src="assets/training-0.webp" width="374" height="373" alt="Original Half Dome" loading="lazy" decoding="async"></a><figcaption>Original Half Dome</figcaption></figure>
+<figure ><a href="assets/training-1.webp" target="_blank" rel="noopener"><img src="assets/training-1.webp" width="374" height="373" alt="t = 0.25" loading="lazy" decoding="async"></a><figcaption>t = 0.25</figcaption></figure>
+<figure ><a href="assets/training-2.webp" target="_blank" rel="noopener"><img src="assets/training-2.webp" width="374" height="373" alt="t = 0.50" loading="lazy" decoding="async"></a><figcaption>t = 0.50</figcaption></figure>
+<figure ><a href="assets/training-3.webp" target="_blank" rel="noopener"><img src="assets/training-3.webp" width="374" height="373" alt="t = 0.75" loading="lazy" decoding="async"></a><figcaption>t = 0.75</figcaption></figure>
+</div>

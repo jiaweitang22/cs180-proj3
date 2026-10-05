@@ -1,0 +1,15 @@
+<div class="result-grid cols-3">
+<figure ><a href="assets/one-step-0-0.webp" target="_blank" rel="noopener"><img src="assets/one-step-0-0.webp" width="374" height="373" alt="Original Half Dome" loading="lazy" decoding="async"></a><figcaption>Original Half Dome</figcaption></figure>
+<figure ><a href="assets/one-step-0-1.webp" target="_blank" rel="noopener"><img src="assets/one-step-0-1.webp" width="374" height="373" alt="Noisy input · t = 0.25" loading="lazy" decoding="async"></a><figcaption>Noisy input · t = 0.25</figcaption></figure>
+<figure ><a href="assets/one-step-0-2.webp" target="_blank" rel="noopener"><img src="assets/one-step-0-2.webp" width="374" height="373" alt="One-step estimate · t = 0.25" loading="lazy" decoding="async"></a><figcaption>One-step estimate · t = 0.25</figcaption></figure>
+</div>
+<div class="result-grid cols-3">
+<figure ><a href="assets/one-step-1-0.webp" target="_blank" rel="noopener"><img src="assets/one-step-1-0.webp" width="374" height="373" alt="Original Half Dome" loading="lazy" decoding="async"></a><figcaption>Original Half Dome</figcaption></figure>
+<figure ><a href="assets/one-step-1-1.webp" target="_blank" rel="noopener"><img src="assets/one-step-1-1.webp" width="374" height="373" alt="Noisy input · t = 0.50" loading="lazy" decoding="async"></a><figcaption>Noisy input · t = 0.50</figcaption></figure>
+<figure ><a href="assets/one-step-1-2.webp" target="_blank" rel="noopener"><img src="assets/one-step-1-2.webp" width="374" height="373" alt="One-step estimate · t = 0.50" loading="lazy" decoding="async"></a><figcaption>One-step estimate · t = 0.50</figcaption></figure>
+</div>
+<div class="result-grid cols-3">
+<figure ><a href="assets/one-step-2-0.webp" target="_blank" rel="noopener"><img src="assets/one-step-2-0.webp" width="374" height="373" alt="Original Half Dome" loading="lazy" decoding="async"></a><figcaption>Original Half Dome</figcaption></figure>
+<figure ><a href="assets/one-step-2-1.webp" target="_blank" rel="noopener"><img src="assets/one-step-2-1.webp" width="374" height="373" alt="Noisy input · t = 0.75" loading="lazy" decoding="async"></a><figcaption>Noisy input · t = 0.75</figcaption></figure>
+<figure ><a href="assets/one-step-2-2.webp" target="_blank" rel="noopener"><img src="assets/one-step-2-2.webp" width="374" height="373" alt="One-step estimate · t = 0.75" loading="lazy" decoding="async"></a><figcaption>One-step estimate · t = 0.75</figcaption></figure>
+</div>

@@ -1,0 +1,6 @@
+<div class="result-grid cols-4">
+<figure ><a href="assets/comparison-0.webp" target="_blank" rel="noopener"><img src="assets/comparison-0.webp" width="374" height="373" alt="Original" loading="lazy" decoding="async"></a><figcaption>Original</figcaption></figure>
+<figure ><a href="assets/comparison-1.webp" target="_blank" rel="noopener"><img src="assets/comparison-1.webp" width="374" height="373" alt="Gaussian blur" loading="lazy" decoding="async"></a><figcaption>Gaussian blur</figcaption></figure>
+<figure ><a href="assets/comparison-2.webp" target="_blank" rel="noopener"><img src="assets/comparison-2.webp" width="374" height="373" alt="One-step denoising" loading="lazy" decoding="async"></a><figcaption>One-step denoising</figcaption></figure>
+<figure ><a href="assets/comparison-3.webp" target="_blank" rel="noopener"><img src="assets/comparison-3.webp" width="374" height="373" alt="Euler denoising" loading="lazy" decoding="async"></a><figcaption>Euler denoising</figcaption></figure>
+</div>

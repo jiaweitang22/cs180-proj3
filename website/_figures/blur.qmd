@@ -1,0 +1,12 @@
+<div class="result-grid cols-2">
+<figure ><a href="assets/blur-0-0.webp" target="_blank" rel="noopener"><img src="assets/blur-0-0.webp" width="374" height="373" alt="Noisy input · t = 0.25" loading="lazy" decoding="async"></a><figcaption>Noisy input · t = 0.25</figcaption></figure>
+<figure ><a href="assets/blur-0-1.webp" target="_blank" rel="noopener"><img src="assets/blur-0-1.webp" width="374" height="373" alt="Gaussian blur · σ = 8 · t = 0.25" loading="lazy" decoding="async"></a><figcaption>Gaussian blur · σ = 8 · t = 0.25</figcaption></figure>
+</div>
+<div class="result-grid cols-2">
+<figure ><a href="assets/blur-1-0.webp" target="_blank" rel="noopener"><img src="assets/blur-1-0.webp" width="374" height="373" alt="Noisy input · t = 0.50" loading="lazy" decoding="async"></a><figcaption>Noisy input · t = 0.50</figcaption></figure>
+<figure ><a href="assets/blur-1-1.webp" target="_blank" rel="noopener"><img src="assets/blur-1-1.webp" width="374" height="373" alt="Gaussian blur · σ = 4 · t = 0.50" loading="lazy" decoding="async"></a><figcaption>Gaussian blur · σ = 4 · t = 0.50</figcaption></figure>
+</div>
+<div class="result-grid cols-2">
+<figure ><a href="assets/blur-2-0.webp" target="_blank" rel="noopener"><img src="assets/blur-2-0.webp" width="374" height="373" alt="Noisy input · t = 0.75" loading="lazy" decoding="async"></a><figcaption>Noisy input · t = 0.75</figcaption></figure>
+<figure ><a href="assets/blur-2-1.webp" target="_blank" rel="noopener"><img src="assets/blur-2-1.webp" width="374" height="373" alt="Gaussian blur · σ = 1 · t = 0.75" loading="lazy" decoding="async"></a><figcaption>Gaussian blur · σ = 1 · t = 0.75</figcaption></figure>
+</div>

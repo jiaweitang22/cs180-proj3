@@ -1,0 +1,8 @@
+<div class="result-grid cols-3">
+<figure ><a href="assets/trajectory-0.webp" target="_blank" rel="noopener"><img src="assets/trajectory-0.webp" width="374" height="373" alt="t = 0.50 (initial)" loading="lazy" decoding="async"></a><figcaption>t = 0.50 (initial)</figcaption></figure>
+<figure ><a href="assets/trajectory-1.webp" target="_blank" rel="noopener"><img src="assets/trajectory-1.webp" width="374" height="373" alt="t = 0.60" loading="lazy" decoding="async"></a><figcaption>t = 0.60</figcaption></figure>
+<figure ><a href="assets/trajectory-2.webp" target="_blank" rel="noopener"><img src="assets/trajectory-2.webp" width="374" height="373" alt="t = 0.70" loading="lazy" decoding="async"></a><figcaption>t = 0.70</figcaption></figure>
+<figure ><a href="assets/trajectory-3.webp" target="_blank" rel="noopener"><img src="assets/trajectory-3.webp" width="374" height="373" alt="t = 0.80" loading="lazy" decoding="async"></a><figcaption>t = 0.80</figcaption></figure>
+<figure ><a href="assets/trajectory-4.webp" target="_blank" rel="noopener"><img src="assets/trajectory-4.webp" width="374" height="373" alt="t = 0.90" loading="lazy" decoding="async"></a><figcaption>t = 0.90</figcaption></figure>
+<figure ><a href="assets/trajectory-5.webp" target="_blank" rel="noopener"><img src="assets/trajectory-5.webp" width="374" height="373" alt="t = 1.00 (final)" loading="lazy" decoding="async"></a><figcaption>t = 1.00 (final)</figcaption></figure>
+</div>

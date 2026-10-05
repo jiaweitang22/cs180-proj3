@@ -1,0 +1,12 @@
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.rotate-result').forEach(button => {
+    button.addEventListener('click', () => {
+      const figure = document.getElementById(button.getAttribute('aria-controls'));
+      const rotated = figure.classList.toggle('is-rotated');
+      button.setAttribute('aria-pressed', String(rotated));
+      button.textContent = rotated ? 'Return upright' : 'Rotate 180°';
+    });
+  });
+});
+</script>

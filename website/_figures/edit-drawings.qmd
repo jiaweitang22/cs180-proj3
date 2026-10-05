@@ -1,0 +1,39 @@
+
+**Web image: acrylic landscape**
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/edit-web-landscape-0.webp" target="_blank" rel="noopener"><img src="assets/edit-web-landscape-0.webp" width="374" height="373" alt="Original" loading="lazy" decoding="async"></a><figcaption>Original</figcaption></figure>
+<figure ><a href="assets/edit-web-landscape-1.webp" target="_blank" rel="noopener"><img src="assets/edit-web-landscape-1.webp" width="374" height="373" alt="Starting t = 0.02" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.02</figcaption></figure>
+<figure ><a href="assets/edit-web-landscape-2.webp" target="_blank" rel="noopener"><img src="assets/edit-web-landscape-2.webp" width="374" height="373" alt="Starting t = 0.04" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.04</figcaption></figure>
+<figure ><a href="assets/edit-web-landscape-3.webp" target="_blank" rel="noopener"><img src="assets/edit-web-landscape-3.webp" width="374" height="373" alt="Starting t = 0.06" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.06</figcaption></figure>
+<figure ><a href="assets/edit-web-landscape-4.webp" target="_blank" rel="noopener"><img src="assets/edit-web-landscape-4.webp" width="374" height="373" alt="Starting t = 0.10" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.10</figcaption></figure>
+<figure ><a href="assets/edit-web-landscape-5.webp" target="_blank" rel="noopener"><img src="assets/edit-web-landscape-5.webp" width="374" height="373" alt="Starting t = 0.14" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.14</figcaption></figure>
+<figure ><a href="assets/edit-web-landscape-6.webp" target="_blank" rel="noopener"><img src="assets/edit-web-landscape-6.webp" width="374" height="373" alt="Starting t = 0.25" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.25</figcaption></figure>
+<figure ><a href="assets/edit-web-landscape-7.webp" target="_blank" rel="noopener"><img src="assets/edit-web-landscape-7.webp" width="374" height="373" alt="Starting t = 0.50" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.50</figcaption></figure>
+</div>
+
+**My drawing: snow-capped mountain**
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/edit-drawing-mountain-0.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-mountain-0.webp" width="374" height="373" alt="Original" loading="lazy" decoding="async"></a><figcaption>Original</figcaption></figure>
+<figure ><a href="assets/edit-drawing-mountain-1.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-mountain-1.webp" width="374" height="373" alt="Starting t = 0.02" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.02</figcaption></figure>
+<figure ><a href="assets/edit-drawing-mountain-2.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-mountain-2.webp" width="374" height="373" alt="Starting t = 0.04" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.04</figcaption></figure>
+<figure ><a href="assets/edit-drawing-mountain-3.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-mountain-3.webp" width="374" height="373" alt="Starting t = 0.06" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.06</figcaption></figure>
+<figure ><a href="assets/edit-drawing-mountain-4.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-mountain-4.webp" width="374" height="373" alt="Starting t = 0.10" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.10</figcaption></figure>
+<figure ><a href="assets/edit-drawing-mountain-5.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-mountain-5.webp" width="374" height="373" alt="Starting t = 0.14" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.14</figcaption></figure>
+<figure ><a href="assets/edit-drawing-mountain-6.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-mountain-6.webp" width="374" height="373" alt="Starting t = 0.25" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.25</figcaption></figure>
+<figure ><a href="assets/edit-drawing-mountain-7.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-mountain-7.webp" width="374" height="373" alt="Starting t = 0.50" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.50</figcaption></figure>
+</div>
+
+**My drawing: flower**
+
+<div class="result-grid cols-4">
+<figure ><a href="assets/edit-drawing-flower-0.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-flower-0.webp" width="374" height="373" alt="Original" loading="lazy" decoding="async"></a><figcaption>Original</figcaption></figure>
+<figure ><a href="assets/edit-drawing-flower-1.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-flower-1.webp" width="374" height="373" alt="Starting t = 0.02" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.02</figcaption></figure>
+<figure ><a href="assets/edit-drawing-flower-2.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-flower-2.webp" width="374" height="373" alt="Starting t = 0.04" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.04</figcaption></figure>
+<figure ><a href="assets/edit-drawing-flower-3.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-flower-3.webp" width="374" height="373" alt="Starting t = 0.06" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.06</figcaption></figure>
+<figure ><a href="assets/edit-drawing-flower-4.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-flower-4.webp" width="374" height="373" alt="Starting t = 0.10" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.10</figcaption></figure>
+<figure ><a href="assets/edit-drawing-flower-5.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-flower-5.webp" width="374" height="373" alt="Starting t = 0.14" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.14</figcaption></figure>
+<figure ><a href="assets/edit-drawing-flower-6.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-flower-6.webp" width="374" height="373" alt="Starting t = 0.25" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.25</figcaption></figure>
+<figure ><a href="assets/edit-drawing-flower-7.webp" target="_blank" rel="noopener"><img src="assets/edit-drawing-flower-7.webp" width="374" height="373" alt="Starting t = 0.50" loading="lazy" decoding="async"></a><figcaption>Starting t = 0.50</figcaption></figure>
+</div>
