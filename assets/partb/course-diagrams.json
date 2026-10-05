@@ -1,0 +1,26 @@
+[
+  {
+    "file": "unconditional_arch.png",
+    "source": "https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/unconditional_arch.png",
+    "sha256": "b7218329f917c8694df5cb7eda688e793bad9b600ff05b649ffaa18b4086dd68",
+    "role": "Course architecture diagram, not an experimental result"
+  },
+  {
+    "file": "atomic_ops_new.png",
+    "source": "https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/atomic_ops_new.png",
+    "sha256": "35c365f124ed9537bc4a07a28a83b750fc2fe034aad99a164a542c9c6402330c",
+    "role": "Course architecture diagram, not an experimental result"
+  },
+  {
+    "file": "conditional_arch_fm.png",
+    "source": "https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/conditional_arch_fm.png",
+    "sha256": "015915bc8bb63b9a8d4711dd28d40d44234be233e7691a51fc2391677904e48f",
+    "role": "Course architecture diagram, not an experimental result"
+  },
+  {
+    "file": "fc_long.png",
+    "source": "https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/fc_long.png",
+    "sha256": "5049db02b40ae00e014912b513b3c82bcc3dbbc1c11346634dac77a1352cfe19",
+    "role": "Course architecture diagram, not an experimental result"
+  }
+]

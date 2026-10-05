@@ -122,17 +122,34 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">CS 180 Project 3</span></a>
+    <a class="nav-link" href="https://jiaweitang22.github.io/"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.html#setup"> 
-<span class="menu-text">Part A</span></a>
+    <a class="nav-link" href="https://jiaweitang22.github.io/cs180-proj0/"> 
+<span class="menu-text">CS 180 Project 0</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://jiaweitang22.github.io/cs180-proj1/"> 
+<span class="menu-text">CS 180 Project 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://jiaweitang22.github.io/cs180-proj2/"> 
+<span class="menu-text">CS 180 Project 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://jiaweitang22.github.io/cs180-proj3/"> 
+<span class="menu-text">CS 180 Project 3</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jiaweitang22/cs180-proj3"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+    <a class="nav-link" href="https://github.com/jiaweitang22/"> <i class="bi bi-github" role="img" aria-label="GitHub profile">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/jiaweitang22/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn profile">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -174,6 +191,23 @@ window.Quarto = {
   <li><a href="#text-guided-image-editing" id="toc-text-guided-image-editing" class="nav-link" data-scroll-target="#text-guided-image-editing">3.2 Text-Guided Image Editing</a></li>
   <li><a href="#visual-anagrams" id="toc-visual-anagrams" class="nav-link" data-scroll-target="#visual-anagrams">3.3 Visual Anagrams</a></li>
   <li><a href="#hybrid-images" id="toc-hybrid-images" class="nav-link" data-scroll-target="#hybrid-images">3.4 Hybrid Images</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#part-b" id="toc-part-b" class="nav-link" data-scroll-target="#part-b">Part B: Flow Matching on MNIST</a>
+  <ul class="collapse">
+  <li><a href="#partb-single-step" id="toc-partb-single-step" class="nav-link" data-scroll-target="#partb-single-step">1. Training a Single-Step Denoising UNet</a>
+  <ul class="collapse">
+  <li><a href="#partb-unet" id="toc-partb-unet" class="nav-link" data-scroll-target="#partb-unet">1.1 Implementing the UNet</a></li>
+  <li><a href="#partb-noising" id="toc-partb-noising" class="nav-link" data-scroll-target="#partb-noising">1.2 Using the UNet to Train a Denoiser</a></li>
+  </ul></li>
+  <li><a href="#partb-flow-matching" id="toc-partb-flow-matching" class="nav-link" data-scroll-target="#partb-flow-matching">2. Training a Flow Matching Model</a>
+  <ul class="collapse">
+  <li><a href="#partb-time-conditioning" id="toc-partb-time-conditioning" class="nav-link" data-scroll-target="#partb-time-conditioning">2.1 Adding Time Conditioning to UNet</a></li>
+  <li><a href="#partb-time-training" id="toc-partb-time-training" class="nav-link" data-scroll-target="#partb-time-training">2.2 Training the UNet</a></li>
+  <li><a href="#partb-time-sampling" id="toc-partb-time-sampling" class="nav-link" data-scroll-target="#partb-time-sampling">2.3 Sampling from the UNet</a></li>
+  <li><a href="#partb-class-conditioning" id="toc-partb-class-conditioning" class="nav-link" data-scroll-target="#partb-class-conditioning">2.4 Adding Class Conditioning to UNet</a></li>
+  <li><a href="#partb-class-training" id="toc-partb-class-training" class="nav-link" data-scroll-target="#partb-class-training">2.5 Training the UNet</a></li>
+  <li><a href="#partb-class-sampling" id="toc-partb-class-sampling" class="nav-link" data-scroll-target="#partb-class-sampling">2.6 Sampling from the UNet</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -1174,7 +1208,7 @@ Starting t = 0.50
 </div>
 <p>The lighthouse prompt gives the Campanile a clear target: low-time outputs are lighthouses beside the ocean, while intermediate results keep the tower’s framing. At <span class="math inline">\(t=0.25\)</span>, the source architecture begins to dominate again.</p>
 <p>Half Dome becomes an erupting volcano at low times. At <span class="math inline">\(t=0.10\)</span> and <span class="math inline">\(t=0.14\)</span>, smoke rises from a rock formation that still resembles the original. By <span class="math inline">\(t=0.50\)</span>, most of the source scene remains.</p>
-<p>The rooster prompt is especially effective. Low-time outputs become detailed rooster portraits while preserving the turquoise background. At <span class="math inline">\(t=0.25\)</span>, a realistic eye and beak appear inside a mostly pixelated silhouette—a mix of the source’s style and the prompt’s photographic target.</p>
+<p>The rooster prompt is especially effective. Low-time outputs become detailed rooster portraits while preserving the turquoise background. At <span class="math inline">\(t=0.25\)</span>, a small, complete photographic rooster head appears embedded within the mostly pixelated silhouette. The edit is localized: most of the source’s pixel-art structure remains.</p>
 </section>
 <section id="visual-anagrams" class="level3">
 <h3 class="anchored" data-anchor-id="visual-anagrams">3.3 Visual Anagrams</h3>
@@ -1300,8 +1334,240 @@ Native thumbnails · distant views
 </div>
 <p>The fox/forest result uses seed <strong>181</strong>. Up close, orange foliage and dark trunks dominate; at a smaller size, their arrangement suggests a fox’s face. The elephant/ruins result uses seed <strong>298838</strong>. Stone blocks form the near view, while the dark openings and central shape suggest an elephant when reduced.</p>
 <p>I show native 64- and 32-pixel views alongside each full hybrid. The separation is imperfect: scenery remains visible, and the elephant is harder to recognize than the fox. Still, the results show how combining different frequency bands can make one image support two interpretations.</p>
+</section>
+</section>
+</section>
+<section id="part-b" class="level1">
+<h1>Part B: Flow Matching on MNIST</h1>
+<p>In this part, I train a UNet from scratch on MNIST. I start with single-step denoising, then use flow matching to generate digits iteratively. Finally, class conditioning lets me request a specific digit.</p>
+<section id="partb-single-step" class="level2">
+<h2 class="anchored" data-anchor-id="partb-single-step">1. Training a Single-Step Denoising UNet</h2>
+<section id="partb-unet" class="level3">
+<h3 class="anchored" data-anchor-id="partb-unet">1.1 Implementing the UNet</h3>
+<p>The UNet downsamples the image, passes it through a bottleneck, and upsamples it again. Skip connections bring encoder features into the decoder to preserve local information.</p>
+<figure class="course-figure figure">
+<a href="assets/partb/unconditional_arch.png" target="_blank" rel="noopener"><img src="assets/partb/unconditional_arch.png" alt="Course diagram of the unconditional UNet with downsampling, a bottleneck, upsampling, and skip connections." loading="lazy" decoding="async" class="figure-img"></a>
+<figcaption>
+Unconditional UNet. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.
+</figcaption>
+</figure>
+<figure class="course-figure figure">
+<a href="assets/partb/atomic_ops_new.png" target="_blank" rel="noopener"><img src="assets/partb/atomic_ops_new.png" alt="Course definitions of the simple and composed UNet operations." loading="lazy" decoding="async" class="figure-img"></a>
+<figcaption>
+UNet operations. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.
+</figcaption>
+</figure>
+<p><code>Conv</code> changes channels while keeping resolution. <code>DownConv</code> halves the resolution, and <code>UpConv</code> doubles it. <code>Flatten</code> pools 7 × 7 features to 1 × 1; <code>Unflatten</code> expands them back. <code>Concat</code> joins features along the channel dimension.</p>
+</section>
+<section id="partb-noising" class="level3">
+<h3 class="anchored" data-anchor-id="partb-noising">1.2 Using the UNet to Train a Denoiser</h3>
+<p>I add Gaussian noise to clean MNIST digits, with pixels normalized to <span class="math inline">\([0,1]\)</span>:</p>
+<p><span class="math display">\[
+z=x+\sigma\epsilon,\qquad \epsilon\sim\mathcal N(0,I).
+\]</span></p>
+<p>The denoiser learns to reconstruct the clean image by minimizing mean squared error:</p>
+<p><span class="math display">\[
+L=\mathbb E_{z,x}\|D_\theta(z)-x\|^2.
+\]</span></p>
+<p>Below, each column keeps the same test digit and noise tensor. From top to bottom, the rows use <strong><span class="math inline">\(\sigma=[0.0,0.2,0.4,0.5,0.6,0.8,1.0]\)</span></strong>.</p>
+<figure class="mnist-figure figure">
+<a href="assets/partb/noise-levels-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor."> <img src="assets/partb/noise-levels.webp" width="1073" height="753" alt="Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor.
+</figcaption>
+</figure>
+<section id="partb-denoiser-training" class="level4">
+<h4 class="anchored" data-anchor-id="partb-denoiser-training">1.2.1 Training</h4>
+<p>I train on the shuffled MNIST training set for <strong>five epochs</strong> with <strong><span class="math inline">\(\sigma=0.5\)</span></strong>, hidden dimension <strong>128</strong>, batch size <strong>256</strong>, and Adam learning rate <strong><span class="math inline">\(10^{-4}\)</span></strong>. Each batch gets fresh noise. Here is the training loss:</p>
+<figure class="mnist-figure figure">
+<a href="assets/partb/denoise-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Single-step denoising training MSE over all five epochs. Faint line: every optimizer step; solid line: 100-step moving average."> <img src="assets/partb/denoise-loss.webp" width="788" height="290" alt="Single-step denoising training MSE over all five epochs. Faint line: every optimizer step; solid line: 100-step moving average." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Single-step denoising training MSE over all five epochs. Faint line: every optimizer step; solid line: 100-step moving average.
+</figcaption>
+</figure>
+<p>The test results after <strong>epochs 1 and 5</strong> use the same noisy inputs. Each panel shows clean digits, noisy inputs, and predictions, from top to bottom.</p>
+<figure class="mnist-figure figure">
+<a href="assets/partb/denoise-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions."> <img src="assets/partb/denoise-epoch1.webp" width="961" height="293" alt="Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions.
+</figcaption>
+</figure>
+<figure class="mnist-figure figure">
+<a href="assets/partb/denoise-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 5 · σ = 0.5 · Rows: clean test digits / the same noisy inputs / predictions."> <img src="assets/partb/denoise-epoch5.webp" width="961" height="293" alt="Epoch 5 · σ = 0.5 · Rows: clean test digits / the same noisy inputs / predictions." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Epoch 5 · σ = 0.5 · Rows: clean test digits / the same noisy inputs / predictions.
+</figcaption>
+</figure>
+</section>
+<section id="partb-ood" class="level4">
+<h4 class="anchored" data-anchor-id="partb-ood">1.2.2 Out-of-Distribution Testing</h4>
+<p>The model was trained only at <span class="math inline">\(\sigma=0.5\)</span>. I test its final checkpoint on <strong>the same digit</strong> at all seven noise levels, without retraining. Columns increase from <span class="math inline">\(\sigma=0.0\)</span> to <span class="math inline">\(1.0\)</span>; the top row is the input and the bottom row is the prediction.</p>
+<figure class="mnist-figure figure">
+<a href="assets/partb/denoise-ood-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction."> <img src="assets/partb/denoise-ood.webp" width="608" height="178" alt="Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction.
+</figcaption>
+</figure>
+</section>
+<section id="partb-pure-noise" class="level4">
+<h4 class="anchored" data-anchor-id="partb-pure-noise">1.2.3 Denoising Pure Noise</h4>
+<p>Next, I train a new denoiser for five epochs using the same settings, but its input is <strong>pure noise <span class="math inline">\(z=\epsilon\)</span></strong>, independently paired with a clean target digit.</p>
+<figure class="mnist-figure figure">
+<a href="assets/partb/pure-noise-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Pure-noise denoiser training MSE over five epochs. Faint line: every optimizer step; solid line: 100-step moving average."> <img src="assets/partb/pure-noise-loss.webp" width="796" height="290" alt="Pure-noise denoiser training MSE over five epochs. Faint line: every optimizer step; solid line: 100-step moving average." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Pure-noise denoiser training MSE over five epochs. Faint line: every optimizer step; solid line: 100-step moving average.
+</figcaption>
+</figure>
+<figure class="mnist-figure figure">
+<a href="assets/partb/pure-noise-samples-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs."> <img src="assets/partb/pure-noise-samples.webp" width="866" height="178" alt="Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs.
+</figcaption>
+</figure>
+<p>My notebook describes similar blurry, centered averages rather than distinct digits. With MSE, the optimal prediction is the conditional mean. Since the noise and target are independent, this becomes the pixelwise mean of the training digits:</p>
+<p><span class="math display">\[
+D^*(z)=\mathbb E[x\mid z]=\mathbb E[x].
+\]</span></p>
+<p>Averaging many digit shapes explains why these outputs do not look like individual samples from digits 0–9.</p>
+</section>
+</section>
+</section>
+<section id="partb-flow-matching" class="level2">
+<h2 class="anchored" data-anchor-id="partb-flow-matching">2. Training a Flow Matching Model</h2>
+<p>Flow matching learns how to move from noise to data, using a linear interpolation:</p>
+<p><span class="math display">\[
+x_t=(1-t)x_0+t x_1,\qquad x_0\sim\mathcal N(0,I),\quad t\in[0,1].
+\]</span></p>
+<p>The target velocity is <span class="math inline">\(u(x_t,t)=x_1-x_0\)</span>, giving the objective</p>
+<p><span class="math display">\[
+L=\mathbb E_{x_0,x_1,t}\|(x_1-x_0)-u_\theta(x_t,t)\|^2.
+\]</span></p>
+<p>The network predicts <strong>velocity</strong>, with <span class="math inline">\(t=0\)</span> representing noise and <span class="math inline">\(t=1\)</span> representing a clean digit.</p>
+<section id="partb-time-conditioning" class="level3">
+<h3 class="anchored" data-anchor-id="partb-time-conditioning">2.1 Adding Time Conditioning to UNet</h3>
+<p>I embed the scalar time <span class="math inline">\(t\)</span> with two fully connected blocks and multiply their outputs into the decoder features after <code>Unflatten</code> and the first <code>UpBlock</code>.</p>
+<figure class="course-figure figure">
+<a href="assets/partb/conditional_arch_fm.png" target="_blank" rel="noopener"><img src="assets/partb/conditional_arch_fm.png" alt="Course diagram showing the conditioning injection sites in the UNet decoder." loading="lazy" decoding="async" class="figure-img"></a>
+<figcaption>
+Conditioned UNet. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>. The flow model predicts velocity.
+</figcaption>
+</figure>
+<figure class="course-figure fc-figure figure">
+<a href="assets/partb/fc_long.png" target="_blank" rel="noopener"><img src="assets/partb/fc_long.png" alt="FCBlock: Linear, GELU, then Linear." loading="lazy" decoding="async" class="figure-img"></a>
+<figcaption>
+FCBlock for conditioning. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.
+</figcaption>
+</figure>
+</section>
+<section id="partb-time-training" class="level3">
+<h3 class="anchored" data-anchor-id="partb-time-training">2.2 Training the UNet</h3>
+<p>I train for <strong>ten epochs</strong> with hidden dimension <strong>64</strong>, batch size <strong>64</strong>, and Adam starting at <strong><span class="math inline">\(10^{-2}\)</span></strong>. Each batch gets fresh Gaussian noise and times sampled from <span class="math inline">\(U[0,1]\)</span>. The exponential scheduler steps after each epoch with decay factor <span class="math inline">\(0.1^{1/10}\)</span>.</p>
+<figure class="mnist-figure figure">
+<a href="assets/partb/time-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average."> <img src="assets/partb/time-loss.webp" width="790" height="290" alt="Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average.
+</figcaption>
+</figure>
+<p>The recorded mean training MSE falls from <strong>0.17787</strong> at epoch 1 to <strong>0.09141</strong> at epoch 10.</p>
+</section>
+<section id="partb-time-sampling" class="level3">
+<h3 class="anchored" data-anchor-id="partb-time-sampling">2.3 Sampling from the UNet</h3>
+<p>Starting from Gaussian noise, I take <strong>50 Euler steps</strong> toward the data distribution:</p>
+<p><span class="math display">\[
+x_{t+\Delta t}=x_t+\Delta t\,u_\theta(x_t,t),\qquad \Delta t=1/50.
+\]</span></p>
+<p>These <strong>40-sample grids</strong> come from epochs <strong>1, 5, and 10</strong>, using the same initial noise with seed <strong>180</strong>. This model receives time conditioning only.</p>
+<figure class="mnist-figure figure">
+<a href="assets/partb/time-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180."> <img src="assets/partb/time-epoch1.webp" width="1010" height="408" alt="Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180.
+</figcaption>
+</figure>
+<figure class="mnist-figure figure">
+<a href="assets/partb/time-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps."> <img src="assets/partb/time-epoch5.webp" width="1010" height="408" alt="Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps.
+</figcaption>
+</figure>
+<figure class="mnist-figure figure">
+<a href="assets/partb/time-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps."> <img src="assets/partb/time-epoch10.webp" width="1010" height="408" alt="Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps.
+</figcaption>
+</figure>
+</section>
+<section id="partb-class-conditioning" class="level3">
+<h3 class="anchored" data-anchor-id="partb-class-conditioning">2.4 Adding Class Conditioning to UNet</h3>
+<p>I encode the requested digit as a <strong>10-dimensional one-hot vector</strong> and add two class FC blocks. At the two decoder injection sites, the conditioning becomes</p>
+<p><span class="math display">\[
+h_{\mathrm{unflatten}}\leftarrow c_1\odot h_{\mathrm{unflatten}}+t_1,\qquad
+h_{\mathrm{up1}}\leftarrow c_2\odot h_{\mathrm{up1}}+t_2.
+\]</span></p>
+<p>During training, I replace the entire class vector with zeros <strong>10% of the time</strong>. This lets the same model make unconditional predictions for classifier-free guidance.</p>
+</section>
+<section id="partb-class-training" class="level3">
+<h3 class="anchored" data-anchor-id="partb-class-training">2.5 Training the UNet</h3>
+<p>The class-conditioned model uses the same flow objective and training settings as the time-only model, with class dropout added. Here is its training loss:</p>
+<figure class="mnist-figure figure">
+<a href="assets/partb/class-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Class-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average."> <img src="assets/partb/class-loss.webp" width="790" height="290" alt="Class-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Class-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average.
+</figcaption>
+</figure>
+<p>The recorded mean training MSE falls from <strong>0.17394</strong> at epoch 1 to <strong>0.08463</strong> at epoch 10.</p>
+</section>
+<section id="partb-class-sampling" class="level3">
+<h3 class="anchored" data-anchor-id="partb-class-sampling">2.6 Sampling from the UNet</h3>
+<p>I sample with <strong>300 Euler steps</strong> and classifier-free guidance at <strong><span class="math inline">\(\gamma=5\)</span></strong>:</p>
+<p><span class="math display">\[
+u_{\mathrm{cfg}}=u_u+\gamma(u_c-u_u),
+\]</span></p>
+<p>where <span class="math inline">\(u_u\)</span> uses the zero class vector and <span class="math inline">\(u_c\)</span> uses the requested digit. This is Part B’s guidance convention; it corresponds to <span class="math inline">\(\gamma=1+w\)</span> in Part A.</p>
+<p>At epochs <strong>1, 5, and 10</strong>, each grid shows <strong>four instances of each digit</strong>. Columns are requested classes <strong>0–9</strong>. All checkpoints use the same initial noise, seed <strong>180</strong>, step count, and guidance scale.</p>
+<figure class="mnist-figure figure">
+<a href="assets/partb/class-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180."> <img src="assets/partb/class-epoch1.webp" width="1010" height="408" alt="Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180.
+</figcaption>
+</figure>
+<figure class="mnist-figure figure">
+<a href="assets/partb/class-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps."> <img src="assets/partb/class-epoch5.webp" width="1010" height="408" alt="Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps.
+</figcaption>
+</figure>
+<figure class="mnist-figure figure">
+<a href="assets/partb/class-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 10 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps."> <img src="assets/partb/class-epoch10.webp" width="1010" height="408" alt="Epoch 10 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Epoch 10 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps.
+</figcaption>
+</figure>
+<section id="partb-no-scheduler" class="level4">
+<h4 class="anchored" data-anchor-id="partb-no-scheduler">Removing the Learning Rate Scheduler</h4>
+<p>To compensate for removing exponential decay, I retrain with a <strong>constant Adam learning rate of 0.003</strong>, reduced from the baseline’s initial 0.01. The seed, data order, architecture, batch size, ten epochs, and class dropout stay the same. No gradient clipping is used.</p>
+<figure class="mnist-figure figure">
+<a href="assets/partb/no-scheduler-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Class-conditioned training without a scheduler · Constant Adam learning rate 0.003 · Ten epochs."> <img src="assets/partb/no-scheduler-loss.webp" width="776" height="290" alt="Class-conditioned training without a scheduler · Constant Adam learning rate 0.003 · Ten epochs." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Class-conditioned training without a scheduler · Constant Adam learning rate 0.003 · Ten epochs.
+</figcaption>
+</figure>
+<figure class="mnist-figure figure">
+<a href="assets/partb/no-scheduler-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5."> <img src="assets/partb/no-scheduler-epoch10.webp" width="1010" height="408" alt="No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5.
+</figcaption>
+</figure>
+<p>Here is the epoch 10 comparison with identical noise and sampling settings. The top four rows use the scheduler; the bottom four use the constant learning rate.</p>
+<figure class="mnist-figure figure">
+<a href="assets/partb/scheduler-comparison-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 10 comparison · Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0–9. Identical initial noise, CFG γ = 5, and 300 Euler steps."> <img src="assets/partb/scheduler-comparison.webp" width="1083" height="868" alt="Epoch 10 comparison · Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0–9. Identical initial noise, CFG γ = 5, and 300 Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
+<figcaption>
+Epoch 10 comparison · Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0–9. Identical initial noise, CFG γ = 5, and 300 Euler steps.
+</figcaption>
+</figure>
+<p>My notebook reports recognizable digits matching their requested classes and visual quality comparable to the baseline. Final mean training MSE is <strong>0.08645</strong> without the scheduler versus <strong>0.08463</strong> with it, about <strong>2.2% higher</strong>. For this run, the lower constant learning rate maintains similar visual quality.</p>
 
 
+</section>
 </section>
 </section>
 </section>
@@ -1310,9 +1576,17 @@ Native thumbnails · distant views
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.rotate-result').forEach(button => {
+    const figure = document.getElementById(button.getAttribute('aria-controls'));
+    const image = figure.querySelector('img');
+    const caption = figure.querySelector('figcaption');
+    const uprightLabel = caption.textContent.trim();
+    const rotatedLabel = figure.nextElementSibling.querySelector('figcaption').textContent.trim();
+
     button.addEventListener('click', () => {
-      const figure = document.getElementById(button.getAttribute('aria-controls'));
       const rotated = figure.classList.toggle('is-rotated');
+      const label = rotated ? rotatedLabel : uprightLabel;
+      caption.textContent = label;
+      image.alt = label;
       button.setAttribute('aria-pressed', String(rotated));
       button.textContent = rotated ? 'Return upright' : 'Rotate 180°';
     });
