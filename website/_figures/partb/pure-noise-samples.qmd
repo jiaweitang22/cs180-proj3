@@ -1,0 +1,6 @@
+<figure class="mnist-figure">
+<a href="assets/partb/pure-noise-samples-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs.">
+<img src="assets/partb/pure-noise-samples.webp" width="866" height="178" alt="Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs." loading="lazy" decoding="async">
+</a>
+<figcaption>Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs.</figcaption>
+</figure>

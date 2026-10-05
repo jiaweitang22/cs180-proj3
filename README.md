@@ -44,6 +44,22 @@ update them if cells are inserted or moved. It preserves the original images,
 removes plot margins for responsive grids, and makes native distant-view
 thumbnails for the hybrids. It never edits or executes the notebook.
 
+Part B extends the same report in `website/index.qmd`. To refresh its figures
+from the executed `notebooks/partb.ipynb` without running training:
+
+```sh
+python website/scripts/extract_partb_results.py
+quarto render website
+```
+
+Part B figures and original notebook plots live in `website/assets/partb/`,
+with cell/output provenance in its `manifest.json`. The separate export script
+validates its selected cells before exporting and preserves Part A assets.
+Generated figure markup lives in `website/_figures/partb/`. Architecture diagrams
+copied from the Fall 2026 handout are attributed in the report and recorded in
+`website/assets/partb/course-diagrams.json`. The report includes the required
+CS180 experiments and avoids claims about unprovided optional extensions.
+
 For the Gradescope website PDF, use the browser's Print / Save as PDF after
 the page and equations have loaded. Print styling preserves both views of
 each illusion and removes navigation controls. Submit code separately.

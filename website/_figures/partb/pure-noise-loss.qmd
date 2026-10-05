@@ -1,0 +1,6 @@
+<figure class="mnist-figure">
+<a href="assets/partb/pure-noise-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Pure-noise denoiser training MSE over five epochs. Faint line: every optimizer step; solid line: 100-step moving average.">
+<img src="assets/partb/pure-noise-loss.webp" width="796" height="290" alt="Pure-noise denoiser training MSE over five epochs. Faint line: every optimizer step; solid line: 100-step moving average." loading="lazy" decoding="async">
+</a>
+<figcaption>Pure-noise denoiser training MSE over five epochs. Faint line: every optimizer step; solid line: 100-step moving average.</figcaption>
+</figure>

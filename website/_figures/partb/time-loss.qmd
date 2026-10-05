@@ -1,0 +1,6 @@
+<figure class="mnist-figure">
+<a href="assets/partb/time-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average.">
+<img src="assets/partb/time-loss.webp" width="790" height="290" alt="Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average." loading="lazy" decoding="async">
+</a>
+<figcaption>Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average.</figcaption>
+</figure>

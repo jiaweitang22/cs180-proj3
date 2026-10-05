@@ -1,0 +1,6 @@
+<figure class="mnist-figure">
+<a href="assets/partb/no-scheduler-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Class-conditioned training without a scheduler · Constant Adam learning rate 0.003 · Ten epochs.">
+<img src="assets/partb/no-scheduler-loss.webp" width="776" height="290" alt="Class-conditioned training without a scheduler · Constant Adam learning rate 0.003 · Ten epochs." loading="lazy" decoding="async">
+</a>
+<figcaption>Class-conditioned training without a scheduler · Constant Adam learning rate 0.003 · Ten epochs.</figcaption>
+</figure>

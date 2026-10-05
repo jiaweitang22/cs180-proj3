@@ -1,0 +1,6 @@
+<figure class="mnist-figure">
+<a href="assets/partb/time-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps.">
+<img src="assets/partb/time-epoch5.webp" width="1010" height="408" alt="Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps." loading="lazy" decoding="async">
+</a>
+<figcaption>Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps.</figcaption>
+</figure>

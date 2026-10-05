@@ -1,0 +1,6 @@
+<figure class="mnist-figure">
+<a href="assets/partb/denoise-ood-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction.">
+<img src="assets/partb/denoise-ood.webp" width="608" height="178" alt="Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction." loading="lazy" decoding="async">
+</a>
+<figcaption>Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction.</figcaption>
+</figure>

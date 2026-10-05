@@ -1,0 +1,6 @@
+<figure class="mnist-figure">
+<a href="assets/partb/class-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180.">
+<img src="assets/partb/class-epoch1.webp" width="1010" height="408" alt="Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180." loading="lazy" decoding="async">
+</a>
+<figcaption>Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180.</figcaption>
+</figure>

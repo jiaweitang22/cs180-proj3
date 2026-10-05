@@ -1,9 +1,17 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.rotate-result').forEach(button => {
+    const figure = document.getElementById(button.getAttribute('aria-controls'));
+    const image = figure.querySelector('img');
+    const caption = figure.querySelector('figcaption');
+    const uprightLabel = caption.textContent.trim();
+    const rotatedLabel = figure.nextElementSibling.querySelector('figcaption').textContent.trim();
+
     button.addEventListener('click', () => {
-      const figure = document.getElementById(button.getAttribute('aria-controls'));
       const rotated = figure.classList.toggle('is-rotated');
+      const label = rotated ? rotatedLabel : uprightLabel;
+      caption.textContent = label;
+      image.alt = label;
       button.setAttribute('aria-pressed', String(rotated));
       button.textContent = rotated ? 'Return upright' : 'Rotate 180°';
     });

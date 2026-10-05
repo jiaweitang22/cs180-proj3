@@ -155,7 +155,7 @@ The lighthouse prompt gives the Campanile a clear target: low-time outputs are l
 
 Half Dome becomes an erupting volcano at low times. At $t=0.10$ and $t=0.14$, smoke rises from a rock formation that still resembles the original. By $t=0.50$, most of the source scene remains.
 
-The rooster prompt is especially effective. Low-time outputs become detailed rooster portraits while preserving the turquoise background. At $t=0.25$, a realistic eye and beak appear inside a mostly pixelated silhouette—a mix of the source's style and the prompt's photographic target.
+The rooster prompt is especially effective. Low-time outputs become detailed rooster portraits while preserving the turquoise background. At $t=0.25$, a small, complete photographic rooster head appears embedded within the mostly pixelated silhouette. The edit is localized: most of the source's pixel-art structure remains.
 
 ### 3.3 Visual Anagrams {#visual-anagrams}
 
@@ -194,3 +194,182 @@ The composite velocity drives each Euler step. I use Gaussian blur with **kernel
 The fox/forest result uses seed **181**. Up close, orange foliage and dark trunks dominate; at a smaller size, their arrangement suggests a fox's face. The elephant/ruins result uses seed **298838**. Stone blocks form the near view, while the dark openings and central shape suggest an elephant when reduced.
 
 I show native 64- and 32-pixel views alongside each full hybrid. The separation is imperfect: scenery remains visible, and the elephant is harder to recognize than the fox. Still, the results show how combining different frequency bands can make one image support two interpretations.
+
+# Part B: Flow Matching on MNIST {#part-b}
+
+In this part, I train a UNet from scratch on MNIST. I start with single-step denoising, then use flow matching to generate digits iteratively. Finally, class conditioning lets me request a specific digit.
+
+## 1. Training a Single-Step Denoising UNet {#partb-single-step}
+
+### 1.1 Implementing the UNet {#partb-unet}
+
+The UNet downsamples the image, passes it through a bottleneck, and upsamples it again. Skip connections bring encoder features into the decoder to preserve local information.
+
+<figure class="course-figure">
+<a href="assets/partb/unconditional_arch.png" target="_blank" rel="noopener"><img src="assets/partb/unconditional_arch.png" alt="Course diagram of the unconditional UNet with downsampling, a bottleneck, upsampling, and skip connections." loading="lazy" decoding="async"></a>
+<figcaption>Unconditional UNet. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.</figcaption>
+</figure>
+
+<figure class="course-figure">
+<a href="assets/partb/atomic_ops_new.png" target="_blank" rel="noopener"><img src="assets/partb/atomic_ops_new.png" alt="Course definitions of the simple and composed UNet operations." loading="lazy" decoding="async"></a>
+<figcaption>UNet operations. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.</figcaption>
+</figure>
+
+`Conv` changes channels while keeping resolution. `DownConv` halves the resolution, and `UpConv` doubles it. `Flatten` pools 7 × 7 features to 1 × 1; `Unflatten` expands them back. `Concat` joins features along the channel dimension.
+
+### 1.2 Using the UNet to Train a Denoiser {#partb-noising}
+
+I add Gaussian noise to clean MNIST digits, with pixels normalized to $[0,1]$:
+
+$$
+z=x+\sigma\epsilon,\qquad \epsilon\sim\mathcal N(0,I).
+$$
+
+The denoiser learns to reconstruct the clean image by minimizing mean squared error:
+
+$$
+L=\mathbb E_{z,x}\|D_\theta(z)-x\|^2.
+$$
+
+Below, each column keeps the same test digit and noise tensor. From top to bottom, the rows use **$\sigma=[0.0,0.2,0.4,0.5,0.6,0.8,1.0]$**.
+
+{{< include _figures/partb/noise-levels.qmd >}}
+
+#### 1.2.1 Training {#partb-denoiser-training}
+
+I train on the shuffled MNIST training set for **five epochs** with **$\sigma=0.5$**, hidden dimension **128**, batch size **256**, and Adam learning rate **$10^{-4}$**. Each batch gets fresh noise. Here is the training loss:
+
+{{< include _figures/partb/denoise-loss.qmd >}}
+
+The test results after **epochs 1 and 5** use the same noisy inputs. Each panel shows clean digits, noisy inputs, and predictions, from top to bottom.
+
+{{< include _figures/partb/denoise-epoch1.qmd >}}
+
+{{< include _figures/partb/denoise-epoch5.qmd >}}
+
+#### 1.2.2 Out-of-Distribution Testing {#partb-ood}
+
+The model was trained only at $\sigma=0.5$. I test its final checkpoint on **the same digit** at all seven noise levels, without retraining. Columns increase from $\sigma=0.0$ to $1.0$; the top row is the input and the bottom row is the prediction.
+
+{{< include _figures/partb/denoise-ood.qmd >}}
+
+#### 1.2.3 Denoising Pure Noise {#partb-pure-noise}
+
+Next, I train a new denoiser for five epochs using the same settings, but its input is **pure noise $z=\epsilon$**, independently paired with a clean target digit.
+
+{{< include _figures/partb/pure-noise-loss.qmd >}}
+
+{{< include _figures/partb/pure-noise-samples.qmd >}}
+
+My notebook describes similar blurry, centered averages rather than distinct digits. With MSE, the optimal prediction is the conditional mean. Since the noise and target are independent, this becomes the pixelwise mean of the training digits:
+
+$$
+D^*(z)=\mathbb E[x\mid z]=\mathbb E[x].
+$$
+
+Averaging many digit shapes explains why these outputs do not look like individual samples from digits 0–9.
+
+## 2. Training a Flow Matching Model {#partb-flow-matching}
+
+Flow matching learns how to move from noise to data, using a linear interpolation:
+
+$$
+x_t=(1-t)x_0+t x_1,\qquad x_0\sim\mathcal N(0,I),\quad t\in[0,1].
+$$
+
+The target velocity is $u(x_t,t)=x_1-x_0$, giving the objective
+
+$$
+L=\mathbb E_{x_0,x_1,t}\|(x_1-x_0)-u_\theta(x_t,t)\|^2.
+$$
+
+The network predicts **velocity**, with $t=0$ representing noise and $t=1$ representing a clean digit.
+
+### 2.1 Adding Time Conditioning to UNet {#partb-time-conditioning}
+
+I embed the scalar time $t$ with two fully connected blocks and multiply their outputs into the decoder features after `Unflatten` and the first `UpBlock`.
+
+<figure class="course-figure">
+<a href="assets/partb/conditional_arch_fm.png" target="_blank" rel="noopener"><img src="assets/partb/conditional_arch_fm.png" alt="Course diagram showing the conditioning injection sites in the UNet decoder." loading="lazy" decoding="async"></a>
+<figcaption>Conditioned UNet. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>. The flow model predicts velocity.</figcaption>
+</figure>
+
+<figure class="course-figure fc-figure">
+<a href="assets/partb/fc_long.png" target="_blank" rel="noopener"><img src="assets/partb/fc_long.png" alt="FCBlock: Linear, GELU, then Linear." loading="lazy" decoding="async"></a>
+<figcaption>FCBlock for conditioning. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.</figcaption>
+</figure>
+
+### 2.2 Training the UNet {#partb-time-training}
+
+I train for **ten epochs** with hidden dimension **64**, batch size **64**, and Adam starting at **$10^{-2}$**. Each batch gets fresh Gaussian noise and times sampled from $U[0,1]$. The exponential scheduler steps after each epoch with decay factor $0.1^{1/10}$.
+
+{{< include _figures/partb/time-loss.qmd >}}
+
+The recorded mean training MSE falls from **0.17787** at epoch 1 to **0.09141** at epoch 10.
+
+### 2.3 Sampling from the UNet {#partb-time-sampling}
+
+Starting from Gaussian noise, I take **50 Euler steps** toward the data distribution:
+
+$$
+x_{t+\Delta t}=x_t+\Delta t\,u_\theta(x_t,t),\qquad \Delta t=1/50.
+$$
+
+These **40-sample grids** come from epochs **1, 5, and 10**, using the same initial noise with seed **180**. This model receives time conditioning only.
+
+{{< include _figures/partb/time-epoch1.qmd >}}
+
+{{< include _figures/partb/time-epoch5.qmd >}}
+
+{{< include _figures/partb/time-epoch10.qmd >}}
+
+### 2.4 Adding Class Conditioning to UNet {#partb-class-conditioning}
+
+I encode the requested digit as a **10-dimensional one-hot vector** and add two class FC blocks. At the two decoder injection sites, the conditioning becomes
+
+$$
+h_{\mathrm{unflatten}}\leftarrow c_1\odot h_{\mathrm{unflatten}}+t_1,\qquad
+h_{\mathrm{up1}}\leftarrow c_2\odot h_{\mathrm{up1}}+t_2.
+$$
+
+During training, I replace the entire class vector with zeros **10% of the time**. This lets the same model make unconditional predictions for classifier-free guidance.
+
+### 2.5 Training the UNet {#partb-class-training}
+
+The class-conditioned model uses the same flow objective and training settings as the time-only model, with class dropout added. Here is its training loss:
+
+{{< include _figures/partb/class-loss.qmd >}}
+
+The recorded mean training MSE falls from **0.17394** at epoch 1 to **0.08463** at epoch 10.
+
+### 2.6 Sampling from the UNet {#partb-class-sampling}
+
+I sample with **300 Euler steps** and classifier-free guidance at **$\gamma=5$**:
+
+$$
+u_{\mathrm{cfg}}=u_u+\gamma(u_c-u_u),
+$$
+
+where $u_u$ uses the zero class vector and $u_c$ uses the requested digit. This is Part B's guidance convention; it corresponds to $\gamma=1+w$ in Part A.
+
+At epochs **1, 5, and 10**, each grid shows **four instances of each digit**. Columns are requested classes **0–9**. All checkpoints use the same initial noise, seed **180**, step count, and guidance scale.
+
+{{< include _figures/partb/class-epoch1.qmd >}}
+
+{{< include _figures/partb/class-epoch5.qmd >}}
+
+{{< include _figures/partb/class-epoch10.qmd >}}
+
+#### Removing the Learning Rate Scheduler {#partb-no-scheduler}
+
+To compensate for removing exponential decay, I retrain with a **constant Adam learning rate of 0.003**, reduced from the baseline's initial 0.01. The seed, data order, architecture, batch size, ten epochs, and class dropout stay the same. No gradient clipping is used.
+
+{{< include _figures/partb/no-scheduler-loss.qmd >}}
+
+{{< include _figures/partb/no-scheduler-epoch10.qmd >}}
+
+Here is the epoch 10 comparison with identical noise and sampling settings. The top four rows use the scheduler; the bottom four use the constant learning rate.
+
+{{< include _figures/partb/scheduler-comparison.qmd >}}
+
+My notebook reports recognizable digits matching their requested classes and visual quality comparable to the baseline. Final mean training MSE is **0.08645** without the scheduler versus **0.08463** with it, about **2.2% higher**. For this run, the lower constant learning rate maintains similar visual quality.

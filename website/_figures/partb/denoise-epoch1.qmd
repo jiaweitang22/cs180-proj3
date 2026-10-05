@@ -1,0 +1,6 @@
+<figure class="mnist-figure">
+<a href="assets/partb/denoise-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions.">
+<img src="assets/partb/denoise-epoch1.webp" width="961" height="293" alt="Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions." loading="lazy" decoding="async">
+</a>
+<figcaption>Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions.</figcaption>
+</figure>
