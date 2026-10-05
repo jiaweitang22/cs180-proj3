@@ -83,6 +83,8 @@ I calculate errors before any display scaling or clipping. All predicted and gro
 
 ![The original appears once at left. Each row shows the noisy input, predicted update, ground-truth update, and RGB RMS error at the labeled time.](assets/velocity.webp){width=2007 height=1174 fig-alt="Half Dome original beside velocity diagnostics at t=0.25, 0.50, and 0.75, with a common RMS error colorbar."}
 
+[View the velocity diagnostics at full resolution](assets/velocity.webp).
+
 The error maps are brightest over the rock and trees at $t=0.25$, where the model must infer more missing structure. The sky is easier to recover. The scaled updates and their errors become smaller as $t$ increases, consistent with the smaller correction needed near the clean endpoint. The shared update scale makes the higher-time panels look muted, but allows a fair comparison of their magnitudes.
 
 ### 1.5 Iterative Denoising with Euler Sampling {#euler-sampling}
@@ -187,7 +189,7 @@ The averaged velocity is used in the Euler update. Rotating the second velocity 
 
 The waterfall/sailor pair uses the bright waterfall and surrounding canyon as features of the rotated face and beard. In the cabin/wolf pair, snowy shapes and dark pine trees form a second set of facial features when rotated. Both results use seed **181**. The rotated views are displayed alongside the upright images, so the illusion is visible without interacting with the page.
 
-I also tried old-man/campfire and snowy-village/horse prompt pairs. The old-man result contains competing facial features, and the village/horse pair is pale with the horse partially visible in the upright scene. I selected the two pairs above because their alternate interpretations are more recognizable. Combining velocity fields gives both prompts influence, but does not guarantee that every prompt pair forms a convincing illusion.
+I selected these two prompt pairs after experimenting with alternative subjects. Their alternate interpretations are more recognizable than the weaker trials, which contained competing features or a faint second subject. Combining velocity fields gives both prompts influence, but does not guarantee that every prompt pair forms a convincing illusion.
 
 ### 3.4 Hybrid Images {#hybrid-images}
 
@@ -205,7 +207,7 @@ Both predictions use the same image and time. I apply the provided Gaussian low-
 
 {{< include _figures/hybrids.qmd >}}
 
-In the fox/forest hybrid, orange foliage and dark trunks provide the near-view scene, while their larger arrangement suggests a fox's face at a distance. For the elephant/ruins pair, stone blocks dominate the close view; the large dark openings and central vertical shape suggest the elephant's facial structure when detail is reduced. These are my chosen prompt pairs rather than the notebook's default examples. The fox/forest result uses seed **181**; elephant/ruins uses seed **298838**.
+In the fox/forest hybrid, orange foliage and dark trunks provide the near-view scene, while their larger arrangement suggests a fox's face at a distance. For the elephant/ruins pair, stone blocks dominate the close view; the large dark openings and central vertical shape suggest the elephant's facial structure when detail is reduced. The fox/forest result uses seed **181**; elephant/ruins uses seed **298838**.
 
 I show the actual full hybrid alongside **native 64- and 32-pixel thumbnails**, rather than enlarging the distant view. The separation is imperfect: some scenery remains visible at small scales, and the second interpretation takes a moment to resolve. The elephant's face is less immediately recognizable than the fox's, so I consider it a weaker result. These experiments illustrate that frequency separation can encourage a hybrid, while prompt choice still strongly affects its success.
 
