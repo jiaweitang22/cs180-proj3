@@ -361,7 +361,7 @@ Class conditioning produces clearer digits that match their requested labels.
 
 #### Removing the Learning Rate Scheduler {#partb-no-scheduler}
 
-I remove exponential decay and lower Adam's learning rate from **0.01** to a **constant 0.003**. All other training settings stay the same; no gradient clipping is used.
+I remove exponential decay and lower Adam's learning rate from **0.01** to a **constant 0.003**. All other training settings stay the same.
 
 {{< include _figures/partb/no-scheduler-loss.qmd >}}
 
