@@ -297,12 +297,7 @@ Two FC blocks embed time $t$ and modulate decoder features after `Unflatten` and
 
 ### 2.2 Training the UNet {#partb-time-training}
 
-I train for **ten epochs**, with hidden dimension **64**, batch size **64**, and Adam at **$10^{-2}$**. An exponential scheduler decays the learning rate by $0.1^{1/10}$ each epoch.
-
-<figure class="course-figure algorithm-figure">
-<a href="assets/partb/algo1_t_only_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo1_t_only_fm.png" alt="Algorithm 1: Sample a clean image, uniform time, and Gaussian noise; interpolate the image and noise; minimize velocity prediction MSE." loading="lazy" decoding="async"></a>
-<figcaption>Algorithm 1 · Time-conditioned training.</figcaption>
-</figure>
+Following [Algorithm B.1](https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo1_t_only_fm.png), I train for **ten epochs**, with hidden dimension **64**, batch size **64**, and Adam at **$10^{-2}$**. An exponential scheduler decays the learning rate by $0.1^{1/10}$ each epoch.
 
 {{< include _figures/partb/time-loss.qmd >}}
 
@@ -310,12 +305,7 @@ Mean training MSE decreases from **0.17787** to **0.09141**.
 
 ### 2.3 Sampling from the UNet {#partb-time-sampling}
 
-I generate **40 samples** at epochs **1, 5, and 10** using **50 Euler steps** and fixed initial noise (seed **180**).
-
-<figure class="course-figure algorithm-figure">
-<a href="assets/partb/algo2_t_only_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo2_t_only_fm.png" alt="Algorithm 2: Initialize Gaussian noise, advance from time zero to one with Euler steps of size one over T, and return the generated image." loading="lazy" decoding="async"></a>
-<figcaption>Algorithm 2 · Time-conditioned sampling.</figcaption>
-</figure>
+I generate **40 samples** at epochs **1, 5, and 10** using **50 Euler steps** ([Algorithm B.2](https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo2_t_only_fm.png)) and fixed initial noise (seed **180**).
 
 Later checkpoints produce more recognizable digits, though some remain misshapen.
 
@@ -331,12 +321,7 @@ Two additional FC blocks embed a **one-hot digit label**. I zero the entire clas
 
 ### 2.5 Training the UNet {#partb-class-training}
 
-Training uses the same ten-epoch settings, with class dropout:
-
-<figure class="course-figure algorithm-figure">
-<a href="assets/partb/algo3_c_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo3_c_fm.png" alt="Algorithm 3: Sample an image and digit label, one-hot encode the label, randomly drop class conditioning, sample time and noise, and minimize velocity prediction MSE." loading="lazy" decoding="async"></a>
-<figcaption>Algorithm 3 · Class-conditioned training.</figcaption>
-</figure>
+Training follows [Algorithm B.3](https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo3_c_fm.png) with the same ten-epoch settings and class dropout.
 
 {{< include _figures/partb/class-loss.qmd >}}
 
@@ -344,12 +329,7 @@ Mean training MSE decreases from **0.17394** to **0.08463**.
 
 ### 2.6 Sampling from the UNet {#partb-class-sampling}
 
-With **300 Euler steps** and **CFG $\gamma=5$**, I generate **four instances of each digit** at epochs **1, 5, and 10**, reusing initial noise (seed **180**).
-
-<figure class="course-figure algorithm-figure">
-<a href="assets/partb/algo4_c_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo4_c_fm.png" alt="Algorithm 4: Predict unconditional and class-conditioned velocities, combine them with classifier-free guidance, and update the image using Euler steps from noise to data." loading="lazy" decoding="async"></a>
-<figcaption>Algorithm 4 · Class-conditioned sampling.</figcaption>
-</figure>
+With **300 Euler steps** and **CFG $\gamma=5$** ([Algorithm B.4](https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo4_c_fm.png)), I generate **four instances of each digit** at epochs **1, 5, and 10**, reusing initial noise (seed **180**).
 
 Class conditioning produces clearer digits that match their requested labels.
 
