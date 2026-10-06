@@ -1,6 +1,6 @@
 <figure class="mnist-figure">
-<a href="assets/partb/pure-noise-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Pure-noise predictions · Epoch 5 · The same ten noise inputs.">
-<img src="assets/partb/pure-noise-epoch5.webp" width="1452" height="205" alt="Pure-noise predictions · Epoch 5 · The same ten noise inputs." loading="lazy" decoding="async">
+<a href="assets/partb/pure-noise-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Pure-noise predictions · Epoch 5.">
+<img src="assets/partb/pure-noise-epoch5.webp" width="1452" height="205" alt="Pure-noise predictions · Epoch 5." loading="lazy" decoding="async">
 </a>
-<figcaption>Pure-noise predictions · Epoch 5 · The same ten noise inputs.</figcaption>
+<figcaption>Pure-noise predictions · Epoch 5.</figcaption>
 </figure>

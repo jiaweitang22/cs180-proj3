@@ -1,6 +1,6 @@
 <figure class="mnist-figure">
-<a href="assets/partb/time-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180.">
-<img src="assets/partb/time-epoch1.webp" width="1452" height="654" alt="Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180." loading="lazy" decoding="async">
+<a href="assets/partb/time-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Time conditioning · Epoch 1.">
+<img src="assets/partb/time-epoch1.webp" width="1452" height="654" alt="Time conditioning · Epoch 1." loading="lazy" decoding="async">
 </a>
-<figcaption>Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180.</figcaption>
+<figcaption>Time conditioning · Epoch 1.</figcaption>
 </figure>

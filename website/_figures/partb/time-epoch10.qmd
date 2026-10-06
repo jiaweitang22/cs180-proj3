@@ -1,6 +1,6 @@
 <figure class="mnist-figure">
-<a href="assets/partb/time-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps.">
-<img src="assets/partb/time-epoch10.webp" width="1452" height="654" alt="Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps." loading="lazy" decoding="async">
+<a href="assets/partb/time-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Time conditioning · Epoch 10.">
+<img src="assets/partb/time-epoch10.webp" width="1452" height="654" alt="Time conditioning · Epoch 10." loading="lazy" decoding="async">
 </a>
-<figcaption>Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps.</figcaption>
+<figcaption>Time conditioning · Epoch 10.</figcaption>
 </figure>

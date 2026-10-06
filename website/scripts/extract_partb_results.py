@@ -21,24 +21,24 @@ FIGURES = ROOT / "website/_figures/partb"
 # Zero-based cell/output indices in the provided, executed notebook.
 # Titles and explicit PNG checks make a changed cell layout fail visibly.
 SPECS = [
-    ("noise-levels", 14, 0, "MNIST at Different Noise Levels", "Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor."),
+    ("noise-levels", 14, 0, "MNIST at Different Noise Levels", "MNIST at increasing noise levels."),
     ("denoise-loss", 21, 0, "loss_plot(train_losses", "Single-step denoising training MSE over all five epochs. Faint line: every optimizer step; solid line: 100-step moving average."),
-    ("denoise-epoch1", 21, 1, "Denoising — Epoch", "Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions."),
-    ("denoise-epoch5", 21, 2, "Denoising — Epoch", "Epoch 5 · σ = 0.5 · Rows: clean test digits / the same noisy inputs / predictions."),
-    ("denoise-ood", 23, 0, "Denoising at Different Noise Levels", "Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction."),
+    ("denoise-epoch1", 21, 1, "Denoising — Epoch", "Denoising · Epoch 1."),
+    ("denoise-epoch5", 21, 2, "Denoising — Epoch", "Denoising · Epoch 5."),
+    ("denoise-ood", 23, 0, "Denoising at Different Noise Levels", "The same digit at seven noise levels."),
     ("pure-noise-loss", 25, 0, "loss_plot(pure_losses", "Pure-noise denoiser training MSE over five epochs. Faint line: every optimizer step; solid line: 100-step moving average."),
-    ("pure-noise-epoch1", 25, 1, "Pure-noise Predictions", "Pure-noise predictions · Epoch 1 · Ten fixed noise inputs."),
-    ("pure-noise-epoch5", 25, 2, "Pure-noise Predictions", "Pure-noise predictions · Epoch 5 · The same ten noise inputs."),
+    ("pure-noise-epoch1", 25, 1, "Pure-noise Predictions", "Pure-noise predictions · Epoch 1."),
+    ("pure-noise-epoch5", 25, 2, "Pure-noise Predictions", "Pure-noise predictions · Epoch 5."),
     ("time-loss", 35, 1, "loss_plot(time_losses", "Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average."),
-    ("time-epoch1", 37, 0, "Time-conditioned Samples", "Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180."),
-    ("time-epoch5", 37, 1, "Time-conditioned Samples", "Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps."),
-    ("time-epoch10", 37, 2, "Time-conditioned Samples", "Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps."),
+    ("time-epoch1", 37, 0, "Time-conditioned Samples", "Time conditioning · Epoch 1."),
+    ("time-epoch5", 37, 1, "Time-conditioned Samples", "Time conditioning · Epoch 5."),
+    ("time-epoch10", 37, 2, "Time-conditioned Samples", "Time conditioning · Epoch 10."),
     ("class-loss", 44, 1, "loss_plot(class_losses", "Class-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average."),
     ("no-scheduler-loss", 44, 3, "loss_plot(no_scheduler_losses", "Class-conditioned training without a scheduler · Constant Adam learning rate 0.003 · Ten epochs."),
-    ("class-epoch1", 46, 0, "Class-conditioned Samples", "Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180."),
-    ("class-epoch5", 46, 1, "Class-conditioned Samples", "Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps."),
-    ("class-epoch10", 46, 2, "Class-conditioned Samples", "Epoch 10 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps."),
-    ("no-scheduler-epoch10", 46, 3, "No Scheduler — Epoch 10", "No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5."),
+    ("class-epoch1", 46, 0, "Class-conditioned Samples", "Class conditioning · Epoch 1."),
+    ("class-epoch5", 46, 1, "Class-conditioned Samples", "Class conditioning · Epoch 5."),
+    ("class-epoch10", 46, 2, "Class-conditioned Samples", "Class conditioning · Epoch 10."),
+    ("no-scheduler-epoch10", 46, 3, "No Scheduler — Epoch 10", "No scheduler · Epoch 10."),
 ]
 
 

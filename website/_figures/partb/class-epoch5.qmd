@@ -1,6 +1,6 @@
 <figure class="mnist-figure">
-<a href="assets/partb/class-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps.">
-<img src="assets/partb/class-epoch5.webp" width="1452" height="656" alt="Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps." loading="lazy" decoding="async">
+<a href="assets/partb/class-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Class conditioning · Epoch 5.">
+<img src="assets/partb/class-epoch5.webp" width="1452" height="656" alt="Class conditioning · Epoch 5." loading="lazy" decoding="async">
 </a>
-<figcaption>Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps.</figcaption>
+<figcaption>Class conditioning · Epoch 5.</figcaption>
 </figure>
