@@ -329,7 +329,16 @@ Mean training MSE decreases from **0.17394** to **0.08463**.
 
 ### 2.6 Sampling from the UNet {#partb-class-sampling}
 
-With **300 Euler steps** and **CFG $\gamma=5$** ([Algorithm 4](https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo4_c_fm.png)), I generate **four instances of each digit** at epochs **1, 5, and 10**, reusing initial noise (seed **180**).
+I combine unconditional and class-conditioned velocities using classifier-free guidance:
+
+$$
+u_{\mathrm{CFG}}(x_t,t,c)
+= u_\theta(x_t,t,\varnothing)
++ \gamma\left[u_\theta(x_t,t,c)-u_\theta(x_t,t,\varnothing)\right],
+\qquad \gamma=5.
+$$
+
+Here, $\varnothing$ means the class-conditioning vector is zeroed. With **300 Euler steps**, I generate **four instances of each digit** at epochs **1, 5, and 10**, reusing initial noise (seed **180**).
 
 Class conditioning produces clearer digits that match their requested labels.
 
