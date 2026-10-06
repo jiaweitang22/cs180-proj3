@@ -1424,7 +1424,7 @@ Pure-noise denoiser training MSE over five epochs. Faint line: every optimizer s
 Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs.
 </figcaption>
 </figure>
-<p>My notebook describes similar blurry, centered averages rather than distinct digits. With MSE, the optimal prediction is the conditional mean. Since the noise and target are independent, this becomes the pixelwise mean of the training digits:</p>
+<p>The outputs resemble blurry, centered averages rather than distinct digits. With MSE, the optimal prediction is the conditional mean. Since the noise and target are independent, this becomes the pixelwise mean of the training digits:</p>
 <p><span class="math display">\[
 D^*(z)=\mathbb E[x\mid z]=\mathbb E[x].
 \]</span></p>
@@ -1461,7 +1461,13 @@ FCBlock for conditioning. Diagram from the <a href="https://cal-cs180.github.io/
 </section>
 <section id="partb-time-training" class="level3">
 <h3 class="anchored" data-anchor-id="partb-time-training">2.2 Training the UNet</h3>
-<p>I train for <strong>ten epochs</strong> with hidden dimension <strong>64</strong>, batch size <strong>64</strong>, and Adam starting at <strong><span class="math inline">\(10^{-2}\)</span></strong>. Each batch gets fresh Gaussian noise and times sampled from <span class="math inline">\(U[0,1]\)</span>. The exponential scheduler steps after each epoch with decay factor <span class="math inline">\(0.1^{1/10}\)</span>.</p>
+<p>I follow the course’s training algorithm below, using <strong>ten epochs</strong>, hidden dimension <strong>64</strong>, batch size <strong>64</strong>, and Adam starting at <strong><span class="math inline">\(10^{-2}\)</span></strong>. The exponential scheduler steps after each epoch with decay factor <span class="math inline">\(0.1^{1/10}\)</span>.</p>
+<figure class="course-figure algorithm-figure figure">
+<a href="assets/partb/algo1_t_only_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo1_t_only_fm.png" alt="Algorithm 1: Sample a clean image, uniform time, and Gaussian noise; interpolate the image and noise; minimize velocity prediction MSE." loading="lazy" decoding="async" class="figure-img"></a>
+<figcaption>
+Algorithm 1 · Time-conditioned training. From the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.
+</figcaption>
+</figure>
 <figure class="mnist-figure figure">
 <a href="assets/partb/time-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average."> <img src="assets/partb/time-loss.webp" width="790" height="290" alt="Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
@@ -1472,10 +1478,13 @@ Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer 
 </section>
 <section id="partb-time-sampling" class="level3">
 <h3 class="anchored" data-anchor-id="partb-time-sampling">2.3 Sampling from the UNet</h3>
-<p>Starting from Gaussian noise, I take <strong>50 Euler steps</strong> toward the data distribution:</p>
-<p><span class="math display">\[
-x_{t+\Delta t}=x_t+\Delta t\,u_\theta(x_t,t),\qquad \Delta t=1/50.
-\]</span></p>
+<p>I use the course’s sampling algorithm with <strong>50 Euler steps</strong>, starting from Gaussian noise.</p>
+<figure class="course-figure algorithm-figure figure">
+<a href="assets/partb/algo2_t_only_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo2_t_only_fm.png" alt="Algorithm 2: Initialize Gaussian noise, advance from time zero to one with Euler steps of size one over T, and return the generated image." loading="lazy" decoding="async" class="figure-img"></a>
+<figcaption>
+Algorithm 2 · Time-conditioned sampling. From the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.
+</figcaption>
+</figure>
 <p>These <strong>40-sample grids</strong> come from epochs <strong>1, 5, and 10</strong>, using the same initial noise with seed <strong>180</strong>. This model receives time conditioning only.</p>
 <figure class="mnist-figure figure">
 <a href="assets/partb/time-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180."> <img src="assets/partb/time-epoch1.webp" width="1010" height="408" alt="Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180." loading="lazy" decoding="async" class="figure-img"> </a>
@@ -1498,16 +1507,19 @@ Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler
 </section>
 <section id="partb-class-conditioning" class="level3">
 <h3 class="anchored" data-anchor-id="partb-class-conditioning">2.4 Adding Class Conditioning to UNet</h3>
-<p>I encode the requested digit as a <strong>10-dimensional one-hot vector</strong> and add two class FC blocks. At the two decoder injection sites, the conditioning becomes</p>
-<p><span class="math display">\[
-h_{\mathrm{unflatten}}\leftarrow c_1\odot h_{\mathrm{unflatten}}+t_1,\qquad
-h_{\mathrm{up1}}\leftarrow c_2\odot h_{\mathrm{up1}}+t_2.
-\]</span></p>
+<p>I encode the requested digit as a <strong>10-dimensional one-hot vector</strong> and add two class FC blocks to condition the decoder on both the digit label and time.</p>
 <p>During training, I replace the entire class vector with zeros <strong>10% of the time</strong>. This lets the same model make unconditional predictions for classifier-free guidance.</p>
 </section>
 <section id="partb-class-training" class="level3">
 <h3 class="anchored" data-anchor-id="partb-class-training">2.5 Training the UNet</h3>
-<p>The class-conditioned model uses the same flow objective and training settings as the time-only model, with class dropout added. Here is its training loss:</p>
+<p>The class-conditioned model uses the same training settings as the time-only model, following the course’s algorithm with class dropout added:</p>
+<figure class="course-figure algorithm-figure figure">
+<a href="assets/partb/algo3_c_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo3_c_fm.png" alt="Algorithm 3: Sample an image and digit label, one-hot encode the label, randomly drop class conditioning, sample time and noise, and minimize velocity prediction MSE." loading="lazy" decoding="async" class="figure-img"></a>
+<figcaption>
+Algorithm 3 · Class-conditioned training. From the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.
+</figcaption>
+</figure>
+<p>Here is the training loss:</p>
 <figure class="mnist-figure figure">
 <a href="assets/partb/class-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Class-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average."> <img src="assets/partb/class-loss.webp" width="790" height="290" alt="Class-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
@@ -1518,11 +1530,13 @@ Class-conditioned flow training MSE over ten epochs. Faint line: every optimizer
 </section>
 <section id="partb-class-sampling" class="level3">
 <h3 class="anchored" data-anchor-id="partb-class-sampling">2.6 Sampling from the UNet</h3>
-<p>I sample with <strong>300 Euler steps</strong> and classifier-free guidance at <strong><span class="math inline">\(\gamma=5\)</span></strong>:</p>
-<p><span class="math display">\[
-u_{\mathrm{cfg}}=u_u+\gamma(u_c-u_u),
-\]</span></p>
-<p>where <span class="math inline">\(u_u\)</span> uses the zero class vector and <span class="math inline">\(u_c\)</span> uses the requested digit. This is Part B’s guidance convention; it corresponds to <span class="math inline">\(\gamma=1+w\)</span> in Part A.</p>
+<p>I use the course’s class-conditioned sampler with <strong>300 Euler steps</strong> and classifier-free guidance at <strong><span class="math inline">\(\gamma=5\)</span></strong>:</p>
+<figure class="course-figure algorithm-figure figure">
+<a href="assets/partb/algo4_c_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo4_c_fm.png" alt="Algorithm 4: Predict unconditional and class-conditioned velocities, combine them with classifier-free guidance, and update the image using Euler steps from noise to data." loading="lazy" decoding="async" class="figure-img"></a>
+<figcaption>
+Algorithm 4 · Class-conditioned sampling. From the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.
+</figcaption>
+</figure>
 <p>At epochs <strong>1, 5, and 10</strong>, each grid shows <strong>four instances of each digit</strong>. Columns are requested classes <strong>0–9</strong>. All checkpoints use the same initial noise, seed <strong>180</strong>, step count, and guidance scale.</p>
 <figure class="mnist-figure figure">
 <a href="assets/partb/class-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180."> <img src="assets/partb/class-epoch1.webp" width="1010" height="408" alt="Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180." loading="lazy" decoding="async" class="figure-img"> </a>
@@ -1564,7 +1578,7 @@ No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–
 Epoch 10 comparison · Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0–9. Identical initial noise, CFG γ = 5, and 300 Euler steps.
 </figcaption>
 </figure>
-<p>My notebook reports recognizable digits matching their requested classes and visual quality comparable to the baseline. Final mean training MSE is <strong>0.08645</strong> without the scheduler versus <strong>0.08463</strong> with it, about <strong>2.2% higher</strong>. For this run, the lower constant learning rate maintains similar visual quality.</p>
+<p>The no-scheduler samples show recognizable digits matching their requested classes, with visual quality comparable to the baseline. Final mean training MSE is <strong>0.08645</strong> without the scheduler versus <strong>0.08463</strong> with it, about <strong>2.2% higher</strong>. For this run, the lower constant learning rate maintains similar visual quality.</p>
 
 
 </section>

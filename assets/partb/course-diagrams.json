@@ -22,5 +22,29 @@
     "source": "https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/fc_long.png",
     "sha256": "5049db02b40ae00e014912b513b3c82bcc3dbbc1c11346634dac77a1352cfe19",
     "role": "Course architecture diagram, not an experimental result"
+  },
+  {
+    "file": "algo1_t_only_fm.png",
+    "source": "https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo1_t_only_fm.png",
+    "sha256": "57ae4a0203cd33afc9e3dede9490af68af2e3f82f8a36d8ccdadebb7aa086d84",
+    "role": "Course algorithm diagram, not an experimental result"
+  },
+  {
+    "file": "algo2_t_only_fm.png",
+    "source": "https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo2_t_only_fm.png",
+    "sha256": "db7c546f204d40126e9c7ccbb0a0cd94e927274c54f3ab1dd5cf0760b44b3291",
+    "role": "Course algorithm diagram, not an experimental result"
+  },
+  {
+    "file": "algo3_c_fm.png",
+    "source": "https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo3_c_fm.png",
+    "sha256": "82c5656bf46c95df210ea356a9798e68b24b25d907db16f6a251ad6454c68078",
+    "role": "Course algorithm diagram, not an experimental result"
+  },
+  {
+    "file": "algo4_c_fm.png",
+    "source": "https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo4_c_fm.png",
+    "sha256": "e4fb8f13e4fd4630c92f1435ec7586b8150ac32d077921bebdda4b19fc0aaf11",
+    "role": "Course algorithm diagram, not an experimental result"
   }
 ]
