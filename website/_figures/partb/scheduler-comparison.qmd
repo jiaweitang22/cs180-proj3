@@ -1,6 +1,0 @@
-<figure class="mnist-figure">
-<a href="assets/partb/scheduler-comparison-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 10 comparison · Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0–9. Identical initial noise, CFG γ = 5, and 300 Euler steps.">
-<img src="assets/partb/scheduler-comparison.webp" width="1083" height="868" alt="Epoch 10 comparison · Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0–9. Identical initial noise, CFG γ = 5, and 300 Euler steps." loading="lazy" decoding="async">
-</a>
-<figcaption>Epoch 10 comparison · Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0–9. Identical initial noise, CFG γ = 5, and 300 Euler steps.</figcaption>
-</figure>

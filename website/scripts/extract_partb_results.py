@@ -39,7 +39,6 @@ SPECS = [
     ("class-epoch5", 46, 1, "Class-conditioned, epoch", "Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps.", True),
     ("class-epoch10", 46, 2, "Class-conditioned, epoch", "Epoch 10 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps.", True),
     ("no-scheduler-epoch10", 46, 3, "No scheduler, epoch 10", "No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5.", True),
-    ("scheduler-comparison", 46, 4, "Epoch 10: scheduled", "Epoch 10 comparison · Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0–9. Identical initial noise, CFG γ = 5, and 300 Euler steps.", True),
 ]
 
 
@@ -69,8 +68,8 @@ def main():
         image.save(ASSETS / original_name, lossless=True)
         crop = None
         if crop_grid:
-            # make_grid has a black canvas. Locate that canvas, excluding the
-            # small black title above it, without touching any digit pixels.
+            # Locate the black sample panels below the title. Keep the white
+            # gutters between panels while removing outer plot margins.
             pixels = np.asarray(image)
             dark = np.max(pixels, axis=2) < 32
             ys = np.flatnonzero(dark.mean(axis=1) > 0.30)

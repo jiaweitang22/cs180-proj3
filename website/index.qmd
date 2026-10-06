@@ -375,8 +375,6 @@ To compensate for removing exponential decay, I retrain with a **constant Adam l
 
 {{< include _figures/partb/no-scheduler-epoch10.qmd >}}
 
-Here is the epoch 10 comparison with identical noise and sampling settings. The top four rows use the scheduler; the bottom four use the constant learning rate.
-
-{{< include _figures/partb/scheduler-comparison.qmd >}}
+Compare this grid with the scheduled epoch 10 samples above. Both use identical initial noise, requested classes, 300 Euler steps, and guidance scale 5.
 
 The no-scheduler samples show recognizable digits matching their requested classes, with visual quality comparable to the baseline. Final mean training MSE is **0.08645** without the scheduler versus **0.08463** with it, about **2.2% higher**. For this run, the lower constant learning rate maintains similar visual quality.

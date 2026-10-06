@@ -1,6 +1,6 @@
 {
   "notebook": "notebooks/partb.ipynb",
-  "sha256": "991e19fb34f7ee5b003c9e970355cf27a4d6cb6dc01d427efcace565a41336ad",
+  "sha256": "f70edaffbf4907afaec28f15a9c3ce556ffe10cb1663311874535d7d69f04282",
   "indices": "zero-based cell and output indices",
   "assets": [
     {
@@ -9,14 +9,14 @@
       "cell": 14,
       "output": 0,
       "size": [
-        1073,
-        753
+        1285,
+        985
       ],
       "crop": [
-        10,
-        31,
-        1083,
-        784
+        18,
+        73,
+        1303,
+        1058
       ],
       "caption": "Noise levels by row, top to bottom: \u03c3 = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor."
     },
@@ -38,14 +38,14 @@
       "cell": 21,
       "output": 1,
       "size": [
-        961,
-        293
+        1285,
+        373
       ],
       "crop": [
-        10,
-        31,
-        971,
-        324
+        18,
+        67,
+        1303,
+        440
       ],
       "caption": "Epoch 1 \u00b7 \u03c3 = 0.5 \u00b7 Rows: clean test digits / noisy inputs / predictions."
     },
@@ -55,14 +55,14 @@
       "cell": 21,
       "output": 2,
       "size": [
-        961,
-        293
+        1285,
+        373
       ],
       "crop": [
-        10,
-        31,
-        971,
-        324
+        18,
+        67,
+        1303,
+        440
       ],
       "caption": "Epoch 5 \u00b7 \u03c3 = 0.5 \u00b7 Rows: clean test digits / the same noisy inputs / predictions."
     },
@@ -72,14 +72,14 @@
       "cell": 23,
       "output": 0,
       "size": [
-        608,
-        178
+        889,
+        228
       ],
       "crop": [
-        10,
-        31,
-        618,
-        209
+        18,
+        62,
+        907,
+        290
       ],
       "caption": "Same test digit at every noise level. Columns: \u03c3 = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction."
     },
@@ -101,14 +101,14 @@
       "cell": 25,
       "output": 1,
       "size": [
-        866,
-        178
+        1285,
+        228
       ],
       "crop": [
-        10,
-        31,
-        876,
-        209
+        18,
+        62,
+        1303,
+        290
       ],
       "caption": "Pure-noise predictions \u00b7 Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs."
     },
@@ -130,14 +130,14 @@
       "cell": 37,
       "output": 0,
       "size": [
-        1010,
-        408
+        1285,
+        524
       ],
       "crop": [
-        10,
-        31,
-        1020,
-        439
+        18,
+        70,
+        1303,
+        594
       ],
       "caption": "Epoch 1 \u00b7 Time conditioning only \u00b7 40 samples \u00b7 50 Euler steps \u00b7 Seed 180."
     },
@@ -147,14 +147,14 @@
       "cell": 37,
       "output": 1,
       "size": [
-        1010,
-        408
+        1285,
+        524
       ],
       "crop": [
-        10,
-        31,
-        1020,
-        439
+        18,
+        70,
+        1303,
+        594
       ],
       "caption": "Epoch 5 \u00b7 Time conditioning only \u00b7 Same 40 initial noise samples and 50 Euler steps."
     },
@@ -164,14 +164,14 @@
       "cell": 37,
       "output": 2,
       "size": [
-        1010,
-        408
+        1285,
+        524
       ],
       "crop": [
-        10,
-        31,
-        1020,
-        439
+        18,
+        70,
+        1303,
+        594
       ],
       "caption": "Epoch 10 \u00b7 Time conditioning only \u00b7 Same 40 initial noise samples and 50 Euler steps."
     },
@@ -205,14 +205,14 @@
       "cell": 46,
       "output": 0,
       "size": [
-        1010,
-        408
+        1285,
+        524
       ],
       "crop": [
-        10,
-        31,
-        1020,
-        439
+        18,
+        70,
+        1303,
+        594
       ],
       "caption": "Epoch 1 \u00b7 Columns: requested digits 0\u20139; four instances per digit \u00b7 CFG \u03b3 = 5 \u00b7 300 Euler steps \u00b7 Seed 180."
     },
@@ -222,14 +222,14 @@
       "cell": 46,
       "output": 1,
       "size": [
-        1010,
-        408
+        1285,
+        524
       ],
       "crop": [
-        10,
-        31,
-        1020,
-        439
+        18,
+        70,
+        1303,
+        594
       ],
       "caption": "Epoch 5 \u00b7 Columns: requested digits 0\u20139; four instances per digit \u00b7 Same noise, CFG, and Euler steps."
     },
@@ -239,14 +239,14 @@
       "cell": 46,
       "output": 2,
       "size": [
-        1010,
-        408
+        1285,
+        524
       ],
       "crop": [
-        10,
-        31,
-        1020,
-        439
+        18,
+        70,
+        1303,
+        594
       ],
       "caption": "Epoch 10 \u00b7 Columns: requested digits 0\u20139; four instances per digit \u00b7 Same noise, CFG, and Euler steps."
     },
@@ -256,33 +256,16 @@
       "cell": 46,
       "output": 3,
       "size": [
-        1010,
-        408
+        1285,
+        524
       ],
       "crop": [
-        10,
-        31,
-        1020,
-        439
+        18,
+        70,
+        1303,
+        594
       ],
       "caption": "No scheduler \u00b7 Epoch 10 \u00b7 Constant learning rate 0.003 \u00b7 Columns: digits 0\u20139; four instances per digit \u00b7 CFG \u03b3 = 5."
-    },
-    {
-      "file": "scheduler-comparison.webp",
-      "original": "scheduler-comparison-original.webp",
-      "cell": 46,
-      "output": 4,
-      "size": [
-        1083,
-        868
-      ],
-      "crop": [
-        10,
-        31,
-        1093,
-        899
-      ],
-      "caption": "Epoch 10 comparison \u00b7 Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0\u20139. Identical initial noise, CFG \u03b3 = 5, and 300 Euler steps."
     }
   ]
 }
