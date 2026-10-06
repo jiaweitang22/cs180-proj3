@@ -1464,7 +1464,7 @@ FCBlock for conditioning.
 </section>
 <section id="partb-time-training" class="level3">
 <h3 class="anchored" data-anchor-id="partb-time-training">2.2 Training the UNet</h3>
-<p>Following <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo1_t_only_fm.png">Algorithm B.1</a>, I train for <strong>ten epochs</strong>, with hidden dimension <strong>64</strong>, batch size <strong>64</strong>, and Adam at <strong><span class="math inline">\(10^{-2}\)</span></strong>. An exponential scheduler decays the learning rate by <span class="math inline">\(0.1^{1/10}\)</span> each epoch.</p>
+<p>Following <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo1_t_only_fm.png">Algorithm 1</a>, I train for <strong>ten epochs</strong>, with hidden dimension <strong>64</strong>, batch size <strong>64</strong>, and Adam at <strong><span class="math inline">\(10^{-2}\)</span></strong>. An exponential scheduler decays the learning rate by <span class="math inline">\(0.1^{1/10}\)</span> each epoch.</p>
 <figure class="mnist-figure figure">
 <a href="assets/partb/time-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average."> <img src="assets/partb/time-loss.webp" width="790" height="290" alt="Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
@@ -1475,7 +1475,7 @@ Time-conditioned flow training MSE over ten epochs. Faint line: every optimizer 
 </section>
 <section id="partb-time-sampling" class="level3">
 <h3 class="anchored" data-anchor-id="partb-time-sampling">2.3 Sampling from the UNet</h3>
-<p>I generate <strong>40 samples</strong> at epochs <strong>1, 5, and 10</strong> using <strong>50 Euler steps</strong> (<a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo2_t_only_fm.png">Algorithm B.2</a>) and fixed initial noise (seed <strong>180</strong>).</p>
+<p>I generate <strong>40 samples</strong> at epochs <strong>1, 5, and 10</strong> using <strong>50 Euler steps</strong> (<a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo2_t_only_fm.png">Algorithm 2</a>) and fixed initial noise (seed <strong>180</strong>).</p>
 <p>Later checkpoints produce more recognizable digits, though some remain misshapen.</p>
 <figure class="mnist-figure figure">
 <a href="assets/partb/time-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Time conditioning · Epoch 1."> <img src="assets/partb/time-epoch1.webp" width="1452" height="654" alt="Time conditioning · Epoch 1." loading="lazy" decoding="async" class="figure-img"> </a>
@@ -1502,7 +1502,7 @@ Time conditioning · Epoch 10.
 </section>
 <section id="partb-class-training" class="level3">
 <h3 class="anchored" data-anchor-id="partb-class-training">2.5 Training the UNet</h3>
-<p>Training follows <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo3_c_fm.png">Algorithm B.3</a> with the same ten-epoch settings and class dropout.</p>
+<p>Training follows <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo3_c_fm.png">Algorithm 3</a> with the same ten-epoch settings and class dropout.</p>
 <figure class="mnist-figure figure">
 <a href="assets/partb/class-loss-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Class-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average."> <img src="assets/partb/class-loss.webp" width="790" height="290" alt="Class-conditioned flow training MSE over ten epochs. Faint line: every optimizer step; solid line: 100-step moving average." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
@@ -1513,7 +1513,7 @@ Class-conditioned flow training MSE over ten epochs. Faint line: every optimizer
 </section>
 <section id="partb-class-sampling" class="level3">
 <h3 class="anchored" data-anchor-id="partb-class-sampling">2.6 Sampling from the UNet</h3>
-<p>With <strong>300 Euler steps</strong> and <strong>CFG <span class="math inline">\(\gamma=5\)</span></strong> (<a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo4_c_fm.png">Algorithm B.4</a>), I generate <strong>four instances of each digit</strong> at epochs <strong>1, 5, and 10</strong>, reusing initial noise (seed <strong>180</strong>).</p>
+<p>With <strong>300 Euler steps</strong> and <strong>CFG <span class="math inline">\(\gamma=5\)</span></strong> (<a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo4_c_fm.png">Algorithm 4</a>), I generate <strong>four instances of each digit</strong> at epochs <strong>1, 5, and 10</strong>, reusing initial noise (seed <strong>180</strong>).</p>
 <p>Class conditioning produces clearer digits that match their requested labels.</p>
 <figure class="mnist-figure figure">
 <a href="assets/partb/class-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Class conditioning · Epoch 1."> <img src="assets/partb/class-epoch1.webp" width="1452" height="656" alt="Class conditioning · Epoch 1." loading="lazy" decoding="async" class="figure-img"> </a>
