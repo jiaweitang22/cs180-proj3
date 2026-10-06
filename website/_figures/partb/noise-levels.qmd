@@ -1,6 +1,6 @@
 <figure class="mnist-figure">
 <a href="assets/partb/noise-levels-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor.">
-<img src="assets/partb/noise-levels.webp" width="1285" height="985" alt="Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor." loading="lazy" decoding="async">
+<img src="assets/partb/noise-levels.webp" width="1455" height="1109" alt="Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor." loading="lazy" decoding="async">
 </a>
 <figcaption>Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor.</figcaption>
 </figure>

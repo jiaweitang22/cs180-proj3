@@ -1,0 +1,6 @@
+<figure class="mnist-figure">
+<a href="assets/partb/pure-noise-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Pure-noise predictions · Epoch 1 · Ten fixed noise inputs.">
+<img src="assets/partb/pure-noise-epoch1.webp" width="1452" height="205" alt="Pure-noise predictions · Epoch 1 · Ten fixed noise inputs." loading="lazy" decoding="async">
+</a>
+<figcaption>Pure-noise predictions · Epoch 1 · Ten fixed noise inputs.</figcaption>
+</figure>

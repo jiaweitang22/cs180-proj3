@@ -259,7 +259,9 @@ Next, I train a new denoiser for five epochs using the same settings, but its in
 
 {{< include _figures/partb/pure-noise-loss.qmd >}}
 
-{{< include _figures/partb/pure-noise-samples.qmd >}}
+{{< include _figures/partb/pure-noise-epoch1.qmd >}}
+
+{{< include _figures/partb/pure-noise-epoch5.qmd >}}
 
 The outputs resemble blurry, centered averages rather than distinct digits. With MSE, the optimal prediction is the conditional mean. Since the noise and target are independent, this becomes the pixelwise mean of the training digits:
 

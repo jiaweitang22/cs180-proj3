@@ -1,6 +1,6 @@
 <figure class="mnist-figure">
 <a href="assets/partb/no-scheduler-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5.">
-<img src="assets/partb/no-scheduler-epoch10.webp" width="1285" height="524" alt="No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5." loading="lazy" decoding="async">
+<img src="assets/partb/no-scheduler-epoch10.webp" width="1452" height="656" alt="No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5." loading="lazy" decoding="async">
 </a>
 <figcaption>No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5.</figcaption>
 </figure>
