@@ -1513,7 +1513,14 @@ Class-conditioned flow training MSE over ten epochs. Faint line: every optimizer
 </section>
 <section id="partb-class-sampling" class="level3">
 <h3 class="anchored" data-anchor-id="partb-class-sampling">2.6 Sampling from the UNet</h3>
-<p>With <strong>300 Euler steps</strong> and <strong>CFG <span class="math inline">\(\gamma=5\)</span></strong> (<a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/assets/algo4_c_fm.png">Algorithm 4</a>), I generate <strong>four instances of each digit</strong> at epochs <strong>1, 5, and 10</strong>, reusing initial noise (seed <strong>180</strong>).</p>
+<p>I combine unconditional and class-conditioned velocities using classifier-free guidance:</p>
+<p><span class="math display">\[
+u_{\mathrm{CFG}}(x_t,t,c)
+= u_\theta(x_t,t,\varnothing)
++ \gamma\left[u_\theta(x_t,t,c)-u_\theta(x_t,t,\varnothing)\right],
+\qquad \gamma=5.
+\]</span></p>
+<p>Here, <span class="math inline">\(\varnothing\)</span> means the class-conditioning vector is zeroed. With <strong>300 Euler steps</strong>, I generate <strong>four instances of each digit</strong> at epochs <strong>1, 5, and 10</strong>, reusing initial noise (seed <strong>180</strong>).</p>
 <p>Class conditioning produces clearer digits that match their requested labels.</p>
 <figure class="mnist-figure figure">
 <a href="assets/partb/class-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Class conditioning · Epoch 1."> <img src="assets/partb/class-epoch1.webp" width="1452" height="656" alt="Class conditioning · Epoch 1." loading="lazy" decoding="async" class="figure-img"> </a>
