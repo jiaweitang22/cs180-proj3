@@ -1371,7 +1371,7 @@ L=\mathbb E_{z,x}\|D_\theta(z)-x\|^2.
 \]</span></p>
 <p>Below, each column keeps the same test digit and noise tensor. From top to bottom, the rows use <strong><span class="math inline">\(\sigma=[0.0,0.2,0.4,0.5,0.6,0.8,1.0]\)</span></strong>.</p>
 <figure class="mnist-figure figure">
-<a href="assets/partb/noise-levels-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor."> <img src="assets/partb/noise-levels.webp" width="1073" height="753" alt="Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/noise-levels-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor."> <img src="assets/partb/noise-levels.webp" width="1285" height="985" alt="Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 Noise levels by row, top to bottom: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Each column reuses the same test digit and noise tensor.
 </figcaption>
@@ -1387,13 +1387,13 @@ Single-step denoising training MSE over all five epochs. Faint line: every optim
 </figure>
 <p>The test results after <strong>epochs 1 and 5</strong> use the same noisy inputs. Each panel shows clean digits, noisy inputs, and predictions, from top to bottom.</p>
 <figure class="mnist-figure figure">
-<a href="assets/partb/denoise-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions."> <img src="assets/partb/denoise-epoch1.webp" width="961" height="293" alt="Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/denoise-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions."> <img src="assets/partb/denoise-epoch1.webp" width="1285" height="373" alt="Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 Epoch 1 · σ = 0.5 · Rows: clean test digits / noisy inputs / predictions.
 </figcaption>
 </figure>
 <figure class="mnist-figure figure">
-<a href="assets/partb/denoise-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 5 · σ = 0.5 · Rows: clean test digits / the same noisy inputs / predictions."> <img src="assets/partb/denoise-epoch5.webp" width="961" height="293" alt="Epoch 5 · σ = 0.5 · Rows: clean test digits / the same noisy inputs / predictions." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/denoise-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 5 · σ = 0.5 · Rows: clean test digits / the same noisy inputs / predictions."> <img src="assets/partb/denoise-epoch5.webp" width="1285" height="373" alt="Epoch 5 · σ = 0.5 · Rows: clean test digits / the same noisy inputs / predictions." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 Epoch 5 · σ = 0.5 · Rows: clean test digits / the same noisy inputs / predictions.
 </figcaption>
@@ -1403,7 +1403,7 @@ Epoch 5 · σ = 0.5 · Rows: clean test digits / the same noisy inputs / predict
 <h4 class="anchored" data-anchor-id="partb-ood">1.2.2 Out-of-Distribution Testing</h4>
 <p>The model was trained only at <span class="math inline">\(\sigma=0.5\)</span>. I test its final checkpoint on <strong>the same digit</strong> at all seven noise levels, without retraining. Columns increase from <span class="math inline">\(\sigma=0.0\)</span> to <span class="math inline">\(1.0\)</span>; the top row is the input and the bottom row is the prediction.</p>
 <figure class="mnist-figure figure">
-<a href="assets/partb/denoise-ood-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction."> <img src="assets/partb/denoise-ood.webp" width="608" height="178" alt="Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/denoise-ood-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction."> <img src="assets/partb/denoise-ood.webp" width="889" height="228" alt="Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 Same test digit at every noise level. Columns: σ = 0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0. Rows: noisy input / prediction.
 </figcaption>
@@ -1419,7 +1419,7 @@ Pure-noise denoiser training MSE over five epochs. Faint line: every optimizer s
 </figcaption>
 </figure>
 <figure class="mnist-figure figure">
-<a href="assets/partb/pure-noise-samples-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs."> <img src="assets/partb/pure-noise-samples.webp" width="866" height="178" alt="Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/pure-noise-samples-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs."> <img src="assets/partb/pure-noise-samples.webp" width="1285" height="228" alt="Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 Pure-noise predictions · Top row: epoch 1; bottom row: epoch 5. Both checkpoints use the same ten noise inputs.
 </figcaption>
@@ -1487,19 +1487,19 @@ Algorithm 2 · Time-conditioned sampling.
 </figure>
 <p>These <strong>40-sample grids</strong> come from epochs <strong>1, 5, and 10</strong>, using the same initial noise with seed <strong>180</strong>. This model receives time conditioning only.</p>
 <figure class="mnist-figure figure">
-<a href="assets/partb/time-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180."> <img src="assets/partb/time-epoch1.webp" width="1010" height="408" alt="Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/time-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180."> <img src="assets/partb/time-epoch1.webp" width="1285" height="524" alt="Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 Epoch 1 · Time conditioning only · 40 samples · 50 Euler steps · Seed 180.
 </figcaption>
 </figure>
 <figure class="mnist-figure figure">
-<a href="assets/partb/time-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps."> <img src="assets/partb/time-epoch5.webp" width="1010" height="408" alt="Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/time-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps."> <img src="assets/partb/time-epoch5.webp" width="1285" height="524" alt="Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 Epoch 5 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps.
 </figcaption>
 </figure>
 <figure class="mnist-figure figure">
-<a href="assets/partb/time-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps."> <img src="assets/partb/time-epoch10.webp" width="1010" height="408" alt="Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/time-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps."> <img src="assets/partb/time-epoch10.webp" width="1285" height="524" alt="Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 Epoch 10 · Time conditioning only · Same 40 initial noise samples and 50 Euler steps.
 </figcaption>
@@ -1539,19 +1539,19 @@ Algorithm 4 · Class-conditioned sampling.
 </figure>
 <p>At epochs <strong>1, 5, and 10</strong>, each grid shows <strong>four instances of each digit</strong>. Columns are requested classes <strong>0–9</strong>. All checkpoints use the same initial noise, seed <strong>180</strong>, step count, and guidance scale.</p>
 <figure class="mnist-figure figure">
-<a href="assets/partb/class-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180."> <img src="assets/partb/class-epoch1.webp" width="1010" height="408" alt="Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/class-epoch1-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180."> <img src="assets/partb/class-epoch1.webp" width="1285" height="524" alt="Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 Epoch 1 · Columns: requested digits 0–9; four instances per digit · CFG γ = 5 · 300 Euler steps · Seed 180.
 </figcaption>
 </figure>
 <figure class="mnist-figure figure">
-<a href="assets/partb/class-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps."> <img src="assets/partb/class-epoch5.webp" width="1010" height="408" alt="Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/class-epoch5-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps."> <img src="assets/partb/class-epoch5.webp" width="1285" height="524" alt="Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 Epoch 5 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps.
 </figcaption>
 </figure>
 <figure class="mnist-figure figure">
-<a href="assets/partb/class-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 10 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps."> <img src="assets/partb/class-epoch10.webp" width="1010" height="408" alt="Epoch 10 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/class-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 10 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps."> <img src="assets/partb/class-epoch10.webp" width="1285" height="524" alt="Epoch 10 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 Epoch 10 · Columns: requested digits 0–9; four instances per digit · Same noise, CFG, and Euler steps.
 </figcaption>
@@ -1566,18 +1566,12 @@ Class-conditioned training without a scheduler · Constant Adam learning rate 0.
 </figcaption>
 </figure>
 <figure class="mnist-figure figure">
-<a href="assets/partb/no-scheduler-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5."> <img src="assets/partb/no-scheduler-epoch10.webp" width="1010" height="408" alt="No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5." loading="lazy" decoding="async" class="figure-img"> </a>
+<a href="assets/partb/no-scheduler-epoch10-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5."> <img src="assets/partb/no-scheduler-epoch10.webp" width="1285" height="524" alt="No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5." loading="lazy" decoding="async" class="figure-img"> </a>
 <figcaption>
 No scheduler · Epoch 10 · Constant learning rate 0.003 · Columns: digits 0–9; four instances per digit · CFG γ = 5.
 </figcaption>
 </figure>
-<p>Here is the epoch 10 comparison with identical noise and sampling settings. The top four rows use the scheduler; the bottom four use the constant learning rate.</p>
-<figure class="mnist-figure figure">
-<a href="assets/partb/scheduler-comparison-original.webp" target="_blank" rel="noopener" aria-label="Open original notebook figure: Epoch 10 comparison · Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0–9. Identical initial noise, CFG γ = 5, and 300 Euler steps."> <img src="assets/partb/scheduler-comparison.webp" width="1083" height="868" alt="Epoch 10 comparison · Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0–9. Identical initial noise, CFG γ = 5, and 300 Euler steps." loading="lazy" decoding="async" class="figure-img"> </a>
-<figcaption>
-Epoch 10 comparison · Top four rows: exponential scheduler; bottom four rows: constant learning rate 0.003. Columns: digits 0–9. Identical initial noise, CFG γ = 5, and 300 Euler steps.
-</figcaption>
-</figure>
+<p>Compare this grid with the scheduled epoch 10 samples above. Both use identical initial noise, requested classes, 300 Euler steps, and guidance scale 5.</p>
 <p>The no-scheduler samples show recognizable digits matching their requested classes, with visual quality comparable to the baseline. Final mean training MSE is <strong>0.08645</strong> without the scheduler versus <strong>0.08463</strong> with it, about <strong>2.2% higher</strong>. For this run, the lower constant learning rate maintains similar visual quality.</p>
 
 
