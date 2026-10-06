@@ -55,8 +55,8 @@ quarto render website
 Part B figures and original notebook plots live in `website/assets/partb/`,
 with cell/output provenance in its `manifest.json`. The separate export script
 validates its selected cells before exporting and preserves Part A assets.
-Generated figure markup lives in `website/_figures/partb/`. Architecture diagrams
-copied from the Fall 2026 handout are attributed in the report and recorded in
+Generated figure markup lives in `website/_figures/partb/`. Source records for
+the architecture diagrams and algorithm images are kept in
 `website/assets/partb/course-diagrams.json`. The report includes the required
 CS180 experiments and avoids claims about unprovided optional extensions.
 

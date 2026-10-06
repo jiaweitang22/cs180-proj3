@@ -207,12 +207,12 @@ The UNet downsamples the image, passes it through a bottleneck, and upsamples it
 
 <figure class="course-figure">
 <a href="assets/partb/unconditional_arch.png" target="_blank" rel="noopener"><img src="assets/partb/unconditional_arch.png" alt="Course diagram of the unconditional UNet with downsampling, a bottleneck, upsampling, and skip connections." loading="lazy" decoding="async"></a>
-<figcaption>Unconditional UNet. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.</figcaption>
+<figcaption>Unconditional UNet.</figcaption>
 </figure>
 
 <figure class="course-figure">
 <a href="assets/partb/atomic_ops_new.png" target="_blank" rel="noopener"><img src="assets/partb/atomic_ops_new.png" alt="Course definitions of the simple and composed UNet operations." loading="lazy" decoding="async"></a>
-<figcaption>UNet operations. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.</figcaption>
+<figcaption>Simple and composed UNet operations.</figcaption>
 </figure>
 
 `Conv` changes channels while keeping resolution. `DownConv` halves the resolution, and `UpConv` doubles it. `Flatten` pools 7 × 7 features to 1 × 1; `Unflatten` expands them back. `Concat` joins features along the channel dimension.
@@ -291,21 +291,21 @@ I embed the scalar time $t$ with two fully connected blocks and multiply their o
 
 <figure class="course-figure">
 <a href="assets/partb/conditional_arch_fm.png" target="_blank" rel="noopener"><img src="assets/partb/conditional_arch_fm.png" alt="Course diagram showing the conditioning injection sites in the UNet decoder." loading="lazy" decoding="async"></a>
-<figcaption>Conditioned UNet. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>. The flow model predicts velocity.</figcaption>
+<figcaption>Conditioned UNet. The flow model predicts velocity.</figcaption>
 </figure>
 
 <figure class="course-figure fc-figure">
 <a href="assets/partb/fc_long.png" target="_blank" rel="noopener"><img src="assets/partb/fc_long.png" alt="FCBlock: Linear, GELU, then Linear." loading="lazy" decoding="async"></a>
-<figcaption>FCBlock for conditioning. Diagram from the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.</figcaption>
+<figcaption>FCBlock for conditioning.</figcaption>
 </figure>
 
 ### 2.2 Training the UNet {#partb-time-training}
 
-I follow the course's training algorithm below, using **ten epochs**, hidden dimension **64**, batch size **64**, and Adam starting at **$10^{-2}$**. The exponential scheduler steps after each epoch with decay factor $0.1^{1/10}$.
+I follow the training algorithm below, using **ten epochs**, hidden dimension **64**, batch size **64**, and Adam starting at **$10^{-2}$**. The exponential scheduler steps after each epoch with decay factor $0.1^{1/10}$.
 
 <figure class="course-figure algorithm-figure">
 <a href="assets/partb/algo1_t_only_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo1_t_only_fm.png" alt="Algorithm 1: Sample a clean image, uniform time, and Gaussian noise; interpolate the image and noise; minimize velocity prediction MSE." loading="lazy" decoding="async"></a>
-<figcaption>Algorithm 1 · Time-conditioned training. From the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.</figcaption>
+<figcaption>Algorithm 1 · Time-conditioned training.</figcaption>
 </figure>
 
 {{< include _figures/partb/time-loss.qmd >}}
@@ -314,11 +314,11 @@ The recorded mean training MSE falls from **0.17787** at epoch 1 to **0.09141** 
 
 ### 2.3 Sampling from the UNet {#partb-time-sampling}
 
-I use the course's sampling algorithm with **50 Euler steps**, starting from Gaussian noise.
+I use the sampling algorithm with **50 Euler steps**, starting from Gaussian noise.
 
 <figure class="course-figure algorithm-figure">
 <a href="assets/partb/algo2_t_only_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo2_t_only_fm.png" alt="Algorithm 2: Initialize Gaussian noise, advance from time zero to one with Euler steps of size one over T, and return the generated image." loading="lazy" decoding="async"></a>
-<figcaption>Algorithm 2 · Time-conditioned sampling. From the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.</figcaption>
+<figcaption>Algorithm 2 · Time-conditioned sampling.</figcaption>
 </figure>
 
 These **40-sample grids** come from epochs **1, 5, and 10**, using the same initial noise with seed **180**. This model receives time conditioning only.
@@ -337,11 +337,11 @@ During training, I replace the entire class vector with zeros **10% of the time*
 
 ### 2.5 Training the UNet {#partb-class-training}
 
-The class-conditioned model uses the same training settings as the time-only model, following the course's algorithm with class dropout added:
+The class-conditioned model uses the same training settings as the time-only model, following the algorithm below with class dropout added:
 
 <figure class="course-figure algorithm-figure">
 <a href="assets/partb/algo3_c_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo3_c_fm.png" alt="Algorithm 3: Sample an image and digit label, one-hot encode the label, randomly drop class conditioning, sample time and noise, and minimize velocity prediction MSE." loading="lazy" decoding="async"></a>
-<figcaption>Algorithm 3 · Class-conditioned training. From the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.</figcaption>
+<figcaption>Algorithm 3 · Class-conditioned training.</figcaption>
 </figure>
 
 Here is the training loss:
@@ -352,11 +352,11 @@ The recorded mean training MSE falls from **0.17394** at epoch 1 to **0.08463** 
 
 ### 2.6 Sampling from the UNet {#partb-class-sampling}
 
-I use the course's class-conditioned sampler with **300 Euler steps** and classifier-free guidance at **$\gamma=5$**:
+I use the class-conditioned sampler with **300 Euler steps** and classifier-free guidance at **$\gamma=5$**:
 
 <figure class="course-figure algorithm-figure">
 <a href="assets/partb/algo4_c_fm.png" target="_blank" rel="noopener"><img src="assets/partb/algo4_c_fm.png" alt="Algorithm 4: Predict unconditional and class-conditioned velocities, combine them with classifier-free guidance, and update the image using Euler steps from noise to data." loading="lazy" decoding="async"></a>
-<figcaption>Algorithm 4 · Class-conditioned sampling. From the <a href="https://cal-cs180.github.io/fa26/hw/proj3-flow/partb.html">Fall 2026 Part B handout</a>.</figcaption>
+<figcaption>Algorithm 4 · Class-conditioned sampling.</figcaption>
 </figure>
 
 At epochs **1, 5, and 10**, each grid shows **four instances of each digit**. Columns are requested classes **0–9**. All checkpoints use the same initial noise, seed **180**, step count, and guidance scale.
