@@ -153,7 +153,7 @@ Now I replace the generic prompt with a description of the desired edit, using t
 
 The lighthouse prompt gives the Campanile a clear target: low-time outputs are lighthouses beside the ocean, while intermediate results keep the tower's framing. At $t=0.25$, the source architecture begins to dominate again.
 
-Half Dome becomes an erupting volcano at low times. At $t=0.10$ and $t=0.14$, smoke rises from a rock formation that still resembles the original. By $t=0.50$, most of the source scene remains.
+Half Dome becomes a cone-shaped erupting volcano through $t=0.14$. At $t=0.25$, smoke rises from a rock formation that still resembles the original. By $t=0.50$, most of the source scene remains.
 
 The rooster prompt is especially effective. Low-time outputs become detailed rooster portraits while preserving the turquoise background. At $t=0.25$, a small, complete photographic rooster head appears embedded within the mostly pixelated silhouette. The edit is localized: most of the source's pixel-art structure remains.
 

@@ -13,12 +13,12 @@ import numpy as np
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
-NOTEBOOK = ROOT / "notebooks/parta.ipynb"
+NOTEBOOK = ROOT / "code/parta.ipynb"
 ASSETS = ROOT / "website/assets"
 ASSETS.mkdir(parents=True, exist_ok=True)
 notebook_bytes = NOTEBOOK.read_bytes()
 notebook = json.loads(notebook_bytes)
-manifest = {"notebook": "notebooks/parta.ipynb", "sha256": hashlib.sha256(notebook_bytes).hexdigest(), "assets": []}
+manifest = {"notebook": "code/parta.ipynb", "sha256": hashlib.sha256(notebook_bytes).hexdigest(), "assets": []}
 
 def read_image(cell, output):
     data = notebook["cells"][cell]["outputs"][output]["data"]["image/png"]
@@ -63,6 +63,11 @@ def panel(cell, output, name, columns, rows=1, count=None):
         slope = image.width / columns
         intercept = templates[0][1] - templates[0][0]*slope
     column_runs = [(round(intercept+c*slope-width/2),round(intercept+c*slope+width/2)) for c in range(columns)]
+    # A figure title shifts the rows down, so measure them from the pictures.
+    # Sample off-centre columns to skip the per-axes titles above each picture.
+    samples = [x0 + f*width//4 for x0,_ in column_runs for f in (1,3)]
+    row_runs = [(a,b) for a,b in image_runs(np.any(pixels[:, samples] < 240, axis=(1,2)))
+                if abs((b-a)-width) <= 8]
     for row in range(rows):
         y = round((row + .5) * image.height / rows)
         x_runs = column_runs
@@ -77,6 +82,8 @@ def panel(cell, output, name, columns, rows=1, count=None):
             # Derive vertical bounds from axes width, preserving white scenery.
             row_stride = (image.height-11)/rows
             y1 = round(image.height-10-(rows-1-row)*row_stride)
+            if len(row_runs) == rows:
+                y1 = int(row_runs[row][1])
             y0 = y1-width+1
             crop = [int(x0),int(y0),int(x1),int(y1)]
             if abs((x1-x0)-(y1-y0)) > 8:
