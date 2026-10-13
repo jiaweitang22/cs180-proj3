@@ -65,6 +65,8 @@ mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: h
   #quarto-content { display: block !important; padding: 0 !important; }
   main.content { max-width: 100%; margin: 0; }
   h2, h3, h4 { break-after: avoid; }
+  /* Keep bold subject labels and prompts with the grids they introduce. */
+  p:has(+ .result-grid), p:has(+ .hybrid-grid), p:has(+ .prompt), .prompt { break-after: avoid; }
   figure, .result-grid, .hybrid-grid { break-inside: avoid; }
   .mnist-figure, .course-figure { max-width: 155mm; margin: 5mm auto; }
   .result-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; }
